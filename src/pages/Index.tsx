@@ -2,26 +2,33 @@ import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
 import { Experience } from "@/components/portfolio/Experience";
 import { Projects } from "@/components/portfolio/Projects";
-import { Contact } from "@/components/portfolio/Contact";
 import { Navigation } from "@/components/portfolio/Navigation";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <div className="lg:flex">
+    <div className="min-h-screen bg-background">
+      <a
+        href="#content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground"
+      >
+        Skip to Content
+      </a>
+      
+      <div className="lg:flex lg:justify-between lg:gap-4">
         {/* Fixed Left Sidebar */}
-        <div className="lg:sticky lg:top-0 lg:h-screen lg:w-1/2 lg:flex lg:flex-col lg:justify-between p-8 lg:p-24">
-          <Hero />
-          <Navigation />
-        </div>
+        <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 px-6 py-12 md:px-12 lg:px-24">
+          <div>
+            <Hero />
+            <Navigation />
+          </div>
+        </header>
 
         {/* Scrollable Right Content */}
-        <div className="lg:w-1/2 p-8 lg:p-24 lg:pt-24">
+        <main id="content" className="lg:w-1/2 lg:py-24 px-6 pb-12 md:px-12 lg:px-24">
           <About />
           <Experience />
           <Projects />
-          <Contact />
-        </div>
+        </main>
       </div>
     </div>
   );
