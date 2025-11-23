@@ -1,24 +1,26 @@
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <div className="animate-fade-in-up">
-      <h1 className="text-5xl lg:text-6xl font-bold text-slate-light mb-4">
-        <span className="glow-text">Your Name</span>
+    <div>
+      <h1 className="text-[clamp(2.5rem,8vw,5rem)] font-bold leading-[1.1] mb-3">
+        <a href="/" className="text-slate-light hover:text-primary transition-colors duration-200">
+          Brittany Chiang
+        </a>
       </h1>
-      <h2 className="text-2xl lg:text-3xl font-semibold text-slate mb-4">
-        Full Stack Developer
+      <h2 className="text-xl md:text-2xl font-medium text-slate-light mb-4 tracking-tight">
+        Front End Engineer
       </h2>
-      <p className="text-slate max-w-sm mb-8">
-        I build exceptional digital experiences that live on the web.
+      <p className="text-slate max-w-xs leading-relaxed">
+        I build accessible, pixel-perfect digital experiences for the web.
       </p>
       
-      <div className="flex gap-6">
+      <div className="flex gap-5 mt-8">
         <a 
           href="https://github.com" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-slate hover:text-primary transition-colors duration-300"
+          className="text-slate hover:text-slate-light transition-colors duration-200"
           aria-label="GitHub"
         >
           <Github className="w-6 h-6" />
@@ -27,26 +29,19 @@ export const Hero = () => {
           href="https://linkedin.com" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-slate hover:text-primary transition-colors duration-300"
+          className="text-slate hover:text-slate-light transition-colors duration-200"
           aria-label="LinkedIn"
         >
           <Linkedin className="w-6 h-6" />
         </a>
         <a 
-          href="https://twitter.com" 
+          href="https://instagram.com" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-slate hover:text-primary transition-colors duration-300"
-          aria-label="Twitter"
+          className="text-slate hover:text-slate-light transition-colors duration-200"
+          aria-label="Instagram"
         >
-          <Twitter className="w-6 h-6" />
-        </a>
-        <a 
-          href="mailto:email@example.com"
-          className="text-slate hover:text-primary transition-colors duration-300"
-          aria-label="Email"
-        >
-          <Mail className="w-6 h-6" />
+          <Instagram className="w-6 h-6" />
         </a>
       </div>
     </div>

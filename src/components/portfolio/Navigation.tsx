@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 
 const navItems = [
-  { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" },
-  { id: "contact", label: "Contact" },
+  { id: "about", label: "ABOUT" },
+  { id: "experience", label: "EXPERIENCE" },
+  { id: "projects", label: "PROJECTS" },
 ];
 
 export const Navigation = () => {
@@ -13,15 +12,15 @@ export const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = navItems.map(item => document.getElementById(item.id));
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
 
-      for (const section of sections) {
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
         if (section) {
           const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
           
-          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            setActiveSection(section.id);
+          if (scrollPosition >= sectionTop) {
+            setActiveSection(navItems[i].id);
             break;
           }
         }
@@ -29,35 +28,49 @@ export const Navigation = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call once to set initial state
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
   };
 
   return (
-    <nav className="hidden lg:block">
-      <ul className="space-y-4">
-        {navItems.map((item, index) => (
+    <nav className="hidden lg:block mt-16" aria-label="In-page navigation">
+      <ul className="space-y-6">
+        {navItems.map((item) => (
           <li key={item.id}>
             <button
               onClick={() => scrollToSection(item.id)}
-              className={`group flex items-center gap-4 transition-all duration-300 ${
-                activeSection === item.id ? "text-slate-light" : "text-slate"
+              className={`group flex items-center gap-4 transition-all duration-200 ${
+                activeSection === item.id ? "" : ""
               }`}
             >
               <span
-                className={`h-px bg-slate transition-all duration-300 ${
+                className={`h-px transition-all duration-200 ${
                   activeSection === item.id
                     ? "w-16 bg-slate-light"
-                    : "w-8 group-hover:w-16 group-hover:bg-slate-light"
+                    : "w-8 bg-slate group-hover:w-16 group-hover:bg-slate-light"
                 }`}
               />
-              <span className="text-xs font-bold uppercase tracking-widest group-hover:text-slate-light transition-colors duration-300">
+              <span
+                className={`text-xs font-bold tracking-widest transition-colors duration-200 ${
+                  activeSection === item.id
+                    ? "text-slate-light"
+                    : "text-slate group-hover:text-slate-light"
+                }`}
+              >
                 {item.label}
               </span>
             </button>
