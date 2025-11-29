@@ -2,7 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    image: "/Screenshot 2025-11-26 214620 - Copy - Copy.png",
+    image: "/1.png",
     title: "Digital Library",
     description: "A modern digital publishing platform built with React and TypeScript. It combines a social blog feed, knowledge wiki, and digital bookstore within a sleek, high-performance interface. The platform features a fully responsive Tailwind-powered design, multi-language support (i18n), and a content-focused user experience.",
     technologies: ["React", "tailwindcss","TypeScript", "i18n"],
