@@ -2,14 +2,14 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    image: "public/Screenshot 2025-11-26 214620 - Copy - Copy.png",
+    image: "/Screenshot 2025-11-26 214620 - Copy - Copy.png",
     title: "Digital Library",
     description: "A modern digital publishing platform built with React and TypeScript. It combines a social blog feed, knowledge wiki, and digital bookstore within a sleek, high-performance interface. The platform features a fully responsive Tailwind-powered design, multi-language support (i18n), and a content-focused user experience.",
     technologies: ["React", "tailwindcss","TypeScript", "i18n"],
     url: "https://pure-scribe-muse2.vercel.app/",
   },
   {
-    image: "public/2.png",
+    image: "/2.png",
     title: "Dashboard",
     description:
     "An administrative dashboard designed for data visualization, management, and monitoring of key performance indicators (KPIs). It likely features charts, tables, and user management tools.",
@@ -17,7 +17,7 @@ const projects = [
     url: "https://dashboard-swart-two-88.vercel.app/",
   },
   {
-    image: "public/3.png",
+    image: "/3.png",
     title: "Tshtri",
     description:
     "Tshtri is a comprehensive e-commerce platform that offers a seamless shopping experience. It features a user-friendly interface, secure payment gateways, and robust inventory management, making it easy for businesses to sell products online.",
