@@ -3,31 +3,40 @@ import { ArrowUpRight } from "lucide-react";
 const experiences = [
   {
     period: "2024 — PRESENT",
-    title: "Senior Frontend Engineer, Accessibility",
-    company: "Klaviyo",
-    url: "https://www.klaviyo.com/",
+    title: "Freelance Front-End Developer",
+    company: "Forlanso",
+    url: "https://www.forlanso.com/ar/zkrya-safy",
     description:
-      "Build and maintain critical components used to construct Klaviyo's frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.",
-    technologies: ["JavaScript", "TypeScript", "React", "Storybook"],
+      "Delivered responsive and modern web interfaces for local clients, enhancing user engagement and overall visual appeal while optimizing performance for portfolio and business websites to improve load times and accessibility. Additionally, collaborated closely with clients to implement custom UI solutions, increasing satisfaction and encouraging repeat visits.",
+    technologies: ["JavaScript", "TypeScript", "React", "Tailwind CSS", "Next.js"],
   },
   {
-    period: "2018 — 2024",
-    title: "Lead Engineer",
-    company: "Upstatement",
-    url: "https://upstatement.com/",
+    period: "2023 — 2024",
+    title: "Front-End Developer ",
+    company: "Personal & Open-Source Projects",
+    // url: "https://upstatement.com/",
     description:
-      "Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship.",
-    technologies: ["React", "React Native", "SCSS", "WordPress"],
+    "Built multiple personal and open-source projects to strengthen front-end fundamentals, including responsive landing pages, interactive UI components, and API-powered applications. Focused on clean architecture, reusable components, and modern JavaScript patterns. Contributed to improving accessibility, performance, and cross-browser compatibility across several projects.",
+    technologies: ["JavaScript", "Git", "CSS3", "REST APIs"],
   },
-  {
-    period: "2017 — 2018",
-    title: "Build Engineer",
-    company: "Apple",
-    url: "https://www.apple.com/",
+    {
+    period: "2023 — 2023",
+    title: "Front-End Volunteer Developer · Community Projects",
+    // company: "Upstatement",
+    // url: "https://upstatement.com/",
     description:
-      "Developed and styled interactive web applications for Apple Music's marketing campaigns. Created a dynamic video streaming platform that increased user engagement by 40%.",
-    technologies: ["JavaScript", "CSS", "Ember.js", "SCSS"],
+    "Collaborated with a small team to develop user-friendly pages for community and student initiatives. Helped design responsive layouts, fix UI bugs, and implement features such as contact forms, simple dashboards, and blog layouts. Ensured smooth deployment workflows and continuous updates based on user feedback.",
+    technologies: [ "HTML", "CSS", "Bootstrap", "UI Debugging","GitHub"],
   },
+     {
+    period: "2022 — 2024",
+    title: "Web Development Intern",
+    // company: "Upstatement",
+    // url: "https://upstatement.com/",
+    description:
+      "Assisted in maintaining front-end components and improving overall website speed for academic and small business projects, while supporting the debugging of JavaScript features and contributing to enhanced front-end performance and stability.",
+    technologies: ["React", "HTML", "CSS", "Git", "JavaScript"],
+  }
 ];
 
 export const Experience = () => {
@@ -45,7 +54,7 @@ export const Experience = () => {
             <li key={index} className="mb-12">
               <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                 <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-lg transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-light/[0.03] lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
-                
+
                 <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate sm:col-span-2" aria-label={exp.period}>
                   {exp.period}
                 </header>

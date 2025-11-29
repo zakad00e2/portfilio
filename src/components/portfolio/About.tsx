@@ -9,33 +9,22 @@ export const About = () => {
       
       <div className="space-y-4 text-slate leading-relaxed">
         <p>
-          I'm a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.
-        </p>
+        I am a passionate Front-End Developer who loves crafting accessible, pixel-perfect user interfaces that combine thoughtful design with solid engineering. I enjoy working at the intersection of design and development, where creativity meets precision, and I take pride in building digital experiences that are visually refined, intuitive, and optimized for performance and usability.        </p>
         
         <p>
-          Currently, I'm a Senior Front-End Engineer at{" "}
-          <a href="https://www.klaviyo.com/" target="_blank" rel="noopener noreferrer" className="inline-link">
-            Klaviyo
-          </a>
-          , specializing in accessibility. I contribute to the creation and maintenance of UI components that power Klaviyo's frontend, ensuring our platform meets web accessibility standards and best practices to deliver an inclusive user experience.
-        </p>
+        
+        Currently, I work as a Freelance Front-End Developer, delivering custom web solutions for clients across different industries. I focus on creating high-quality, user-friendly interfaces that adhere to modern web standards, with a strong emphasis on accessibility to ensure an inclusive experience for all users. My work includes designing and developing polished UI components, optimizing performance, and integrating front-end applications with APIs to deliver complete, professional solutions.        </p>
         
         <p>
-          In the past, I've had the opportunity to develop software across a variety of settings — from{" "}
-          <a href="#" className="inline-link">advertising agencies</a> and{" "}
-          <a href="#" className="inline-link">large corporations</a> to{" "}
-          <a href="#" className="inline-link">start-ups</a> and{" "}
-          <a href="#" className="inline-link">small digital product studios</a>. Additionally, I also released a{" "}
-          <a href="#" className="inline-link">comprehensive video course</a> a few years ago, guiding learners through building a web app with the Spotify API.
-        </p>
+        Recently, I graduated with Distinction in Software Engineering, a journey that provided me with a solid foundation in software development principles, system design, and data structures. Throughout my studies, I worked on multiple hands-on projects that allowed me to apply theoretical knowledge in real development environments—further strengthening my passion for building interactive, high-quality web experiences.        </p>
         
-        <p>
+        {/* <p>
           In my spare time, I'm usually climbing, playing tennis, hanging out with my wife and two cats, or running around Hyrule searching for{" "}
           <span className="group/korok relative inline-block cursor-help whitespace-nowrap">
             <span className="inline-link">Korok seeds</span>
           </span>
           .
-        </p>
+        </p> */}
       </div>
     </section>
   );

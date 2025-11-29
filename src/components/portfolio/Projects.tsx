@@ -2,37 +2,29 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop",
-    title: "Build a Spotify Connected App",
-    description:
-      "Video course that teaches how to build a web app with the Spotify Web API. Topics covered include the principles of REST APIs, user auth flows, Node, Express, React, Styled Components, and more.",
-    technologies: ["React", "Express", "Spotify API", "Styled Components"],
-    url: "https://www.newline.co/courses/build-a-spotify-connected-app",
+    image: "public/Screenshot 2025-11-26 214620 - Copy - Copy.png",
+    title: "Digital Library",
+    description: "A modern digital publishing platform built with React and TypeScript. It combines a social blog feed, knowledge wiki, and digital bookstore within a sleek, high-performance interface. The platform features a fully responsive Tailwind-powered design, multi-language support (i18n), and a content-focused user experience.",
+    technologies: ["React", "tailwindcss","TypeScript", "i18n"],
+    url: "https://pure-scribe-muse2.vercel.app/",
   },
   {
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=200&fit=crop",
-    title: "Integrating Algolia Search with WordPress",
+    image: "public/2.png",
+    title: "Dashboard",
     description:
-      "Building a custom WordPress plugin to integrate Algolia search into a headless WordPress setup. Includes custom API endpoints and React components.",
-    technologies: ["Algolia", "WordPress", "PHP", "React"],
-    url: "#",
+    "An administrative dashboard designed for data visualization, management, and monitoring of key performance indicators (KPIs). It likely features charts, tables, and user management tools.",
+    technologies: ["React", "Material UI", "Chart.js"],
+    url: "https://dashboard-swart-two-88.vercel.app/",
   },
   {
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=200&fit=crop",
-    title: "OctoProfile",
+    image: "public/3.png",
+    title: "Tshtri",
     description:
-      "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-    technologies: ["Next.js", "Chart.js", "GitHub API"],
-    url: "#",
+    "Tshtri is a comprehensive e-commerce platform that offers a seamless shopping experience. It features a user-friendly interface, secure payment gateways, and robust inventory management, making it easy for businesses to sell products online.",
+    technologies: ["html", "css", "bootstrap","JavaScript"],
+    url: "https://tshtri.vercel.app/",
   },
-  {
-    image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=400&h=200&fit=crop",
-    title: "Halcyon Theme",
-    description:
-      "A minimal, dark blue theme for VS Code, Sublime Text, Atom, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
-    technologies: ["VS Code", "Sublime Text", "Atom", "Themes"],
-    url: "#",
-  },
+ 
 ];
 
 export const Projects = () => {
@@ -93,7 +85,7 @@ export const Projects = () => {
           ))}
         </ul>
 
-        <div className="mt-12">
+        {/* <div className="mt-12">
           <a
             href="/archive"
             className="inline-flex items-center font-medium leading-tight text-slate-light group"
@@ -103,7 +95,7 @@ export const Projects = () => {
             </span>
             <ArrowUpRight className="ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-focus-visible:-translate-y-1 group-focus-visible:translate-x-1 motion-reduce:transition-none" />
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
