@@ -51,7 +51,7 @@ export const Projects = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-baseline font-medium leading-tight text-slate-light hover:text-primary focus-visible:text-primary group/link text-base"
                     >
-                      <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded lg:-inset-x-6 lg:block" />
+                      <span className="absolute -inset-x-4 -inset-y-2.5 rounded lg:-inset-x-6 block" />
                       <span>
                         {project.title}
                         <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" />
