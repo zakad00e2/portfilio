@@ -2,7 +2,7 @@ import { Github, Linkedin, Instagram } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <div>
+    <div className="flex min-h-screen flex-col justify-center lg:block lg:min-h-0">
       <h1 className="text-[clamp(2.5rem,8vw,3rem)] font-bold leading-[1.1] mb-3">
         <a href="/" className="text-slate-light hover:text-primary transition-colors duration-200">
           Zakaria Safi
