@@ -18,7 +18,7 @@ const Index = () => {
       
       <div className="lg:flex lg:justify-between lg:gap-4">
         {/* Fixed Left Sidebar */}
-        <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:pt-24 lg:pb-12 px-6 py-12 md:px-12 lg:pl-40 lg:pr-24">
+        <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:pt-24 lg:pb-12 px-6 pt-12 pb-0 md:px-12 lg:pl-40 lg:pr-24">
           <div>
             <Hero />
             <Navigation />
