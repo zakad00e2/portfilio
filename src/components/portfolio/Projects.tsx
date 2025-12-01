@@ -2,6 +2,14 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
+    image: "/Screenshot 2025-12-01 122458.png",
+    title: "Vertex AI",
+    description: 
+    "Vertex AI is a modern website designed for a digital agency specializing in artificial intelligence solutions and web development. It delivers a fast, contemporary user experience with elegant interfaces and smooth animations that reflect the agency’s technological identity.",
+    technologies: ["React", "tailwindcss","TypeScript", "shadcn/ui","Framer Motion","TanStack Query"],
+    url: "https://vertex-ai-peach.vercel.app/",
+  },
+  {
     image: "/1.png",
     title: "Digital Library",
     description: "A modern digital publishing platform built with React and TypeScript. It combines a social blog feed, knowledge wiki, and digital bookstore within a sleek, high-performance interface. The platform features a fully responsive Tailwind-powered design, multi-language support (i18n), and a content-focused user experience.",
