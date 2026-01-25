@@ -21,7 +21,7 @@ const projects = [
 
    {
     image: "/stayle.png",
-    title: "ÉLARA - Timeless Fashion & Conscious Design",
+    title: "ÉLARA - Timeless Fashion & Conscious Design.",
     description:
     "Designed and developed a full e-commerce website for a luxury fashion brand, delivering a modern, elegant UI and a seamless shopping experience. The site includes product and collection pages, a complete shopping cart system, and robust state management, with responsive performance across all devices.",
     technologies: ["React", "TypeScript", "Tailwind CSS"],
