@@ -1,6 +1,44 @@
 import { ArrowUpRight } from "lucide-react";
 
 const projects = [
+     {
+    image: "/market.png",
+    title: "MarketPro",
+    description:
+    "Interactive multi-vendor e-commerce UI. Includes product/category pages, dynamic cart, vendor pages, seller dashboard, and key support pages—focused on clean architecture and a smooth user experience.",
+    technologies: ["React", "TypeScript", "Tailwind CSS","shadcn/ui"],
+    url: "https://arise-market-core.vercel.app/",
+  },
+
+   {
+    image: "/state.png",
+    title: "Luxury Real Estate Platform",
+    description:
+    "A modern, interactive web app for showcasing luxury real estate, built to deliver a fast and seamless browsing experience. It simplifies exploring premium properties and services, supports both Arabic and English (RTL/LTR), and features a responsive design with intuitive UI and smooth navigation.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS","shadcn/ui"],
+    url: "https://prime-property-showcase.vercel.app",
+  },
+
+   {
+    image: "/stayle.png",
+    title: "ÉLARA - Timeless Fashion & Conscious Design",
+    description:
+    "Designed and developed a full e-commerce website for a luxury fashion brand, delivering a modern, elegant UI and a seamless shopping experience. The site includes product and collection pages, a complete shopping cart system, and robust state management, with responsive performance across all devices.",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    url: "https://style-blueprint.vercel.app/",
+  },
+  {
+    image: "/art.png",
+    title: "Artist Lens Hub",
+    description:
+    "portfolio for a contemporary visual artist, designed to showcase abstract artworks in an elegant, gallery-inspired layout. Built with React, Vite, and Tailwind CSS, it features a captivating hero section, a curated gallery experience, and a dedicated contact area for inquiries and commission requests, all optimized for a smooth and immersive user experience.",
+    technologies: ["React", "API", "Tailwind CSS"],
+    url: "https://artist-lens-hub-kqu1.vercel.app/",
+  },
+  
+
+
+
   {
     image: "/Screenshot 2025-12-01 122458.png",
     title: "Vertex AI",
@@ -32,7 +70,10 @@ const projects = [
     technologies: ["html", "css", "bootstrap","JavaScript"],
     url: "https://tshtri.vercel.app/",
   },
+
  
+   
+   
 ];
 
 export const Projects = () => {
