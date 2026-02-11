@@ -1,6 +1,27 @@
 import { ArrowUpRight } from "lucide-react";
 
 const projects = [
+    {
+    image: "/Screenshot 2026-02-11 231128.png",
+    title: "Maisam",
+    description:"Design and development of a full-featured website for coach Maisam, offering personalized health and nutrition services for women. The site presents services in a modern, engaging style, including programs for pregnant and breastfeeding women, health workshops, and personal coaching, with a strong focus on a comfortable user experience that reflects the vision of a balanced, healthy lifestyle.",
+    technologies: ["React", "TypeScript", "Tailwind CSS","Figma"],
+    url: "https://proposal-genius.vercel.app/pricing",
+  },
+   {
+    image: "/Screenshot 2026-02-11 230150.png",
+    title: "Offerly",
+    description:"Offerly is an innovative web application that helps businesses and individuals create and analyze proposals quickly and professionally. It features an interactive user interface, advanced pricing tools, and integration with services such as Supabase to enhance the user experience. The project was developed using React and TypeScript, with a modern design built on Tailwind CSS.",
+    technologies: ["React", "TypeScript", "Tailwind CSS","Supabase"],
+    url: "https://proposal-genius.vercel.app/pricing",
+  },
+    {
+    image: "/Screenshot 2026-02-11 225245.png",
+    title: "SakanGaza",
+    description:"Sakan Gaza is a volunteer housing platform that helps displaced people in Gaza find homes for rent or purchase. It features a fully Arabic RTL interface built with React and TypeScript, uses Supabase for authentication and storage, and includes listing management, image uploads, search filters, and admin moderation tools.",
+    technologies: ["React", "TypeScript", "Tailwind CSS","shadcn/ui","Supabase"],
+    url: "https://sakangaza.com/",
+  },
      {
     image: "/market.png",
     title: "MarketPro",
