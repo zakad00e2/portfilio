@@ -6,8 +6,39 @@
 All colors MUST be HSL.
 */
 
+@font-face {
+  font-family: 'Thmanyah Serif Display';
+  src: url('/fonts/thmanyahserifdisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Thmanyah Sans';
+  src: url('/fonts/thmanyahsans-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Thmanyah Sans';
+  src: url('/fonts/thmanyahsans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Thmanyah Sans';
+  src: url('/fonts/thmanyahsans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
 @layer base {
   :root {
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
     --background: 218 25% 9%;
     --foreground: 217 19% 60%;
 
@@ -49,14 +80,25 @@ All colors MUST be HSL.
 }
 
 @layer base {
+  html[lang="ar"] {
+    --font-sans: 'Thmanyah Sans', 'IBM Plex Sans Arabic', 'Inter', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Thmanyah Serif Display', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
   * {
     @apply border-border;
   }
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-sans);
     line-height: 1.6;
+  }
+
+  html[lang="ar"] .tracking-tight,
+  html[lang="ar"] .tracking-wide,
+  html[lang="ar"] .tracking-widest {
+    letter-spacing: 0;
   }
 
   html {
@@ -102,7 +144,7 @@ All colors MUST be HSL.
     width: 100%;
     height: 1px;
     bottom: 0;
-    left: 0;
+    inset-inline-start: 0;
     background-color: hsl(var(--primary));
     transform: scaleX(0);
     transform-origin: bottom right;
@@ -112,5 +154,35 @@ All colors MUST be HSL.
   .inline-link:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+
+  html[dir="rtl"] .inline-link::after {
+    transform-origin: bottom left;
+  }
+
+  html[dir="rtl"] .inline-link:hover::after {
+    transform-origin: bottom right;
+  }
+
+  .section-heading {
+    @apply text-sm font-bold uppercase tracking-widest text-slate-light;
+  }
+
+  html[lang="ar"] .section-heading {
+    @apply text-2xl font-sans font-medium;
+    font-family: var(--font-sans);
+    font-feature-settings: 'ss01', 'cv11';
+    letter-spacing: normal;
+  }
+
+  .nav-link-text {
+    @apply text-xs font-bold tracking-widest transition-colors duration-200 uppercase;
+  }
+
+  html[lang="ar"] .nav-link-text {
+    @apply text-xl font-sans font-medium capitalize;
+    font-family: var(--font-sans);
+    font-feature-settings: 'ss01', 'cv11';
+    letter-spacing: normal;
   }
 }

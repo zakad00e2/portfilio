@@ -1,18 +1,34 @@
 import { Github, Linkedin, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useLocale } from "@/hooks/use-locale";
+import { buildLocalizedPath } from "@/i18n/locales";
 
 export const Hero = () => {
+  const { t } = useTranslation();
+  const { language } = useLocale();
+
   return (
     <div className="flex min-h-screen flex-col justify-center lg:block lg:min-h-0">
-      <h1 className="text-[clamp(2.5rem,8vw,3rem)] font-bold leading-[1.1] mb-3">
-        <a href="/" className="text-slate-light hover:text-primary transition-colors duration-200">
-          Zakaria Safi
-        </a>
+      <h1 
+        className="text-[clamp(2.5rem,8vw,3rem)] font-serif font-bold leading-[1.1] mb-3"
+        style={{ fontFeatureSettings: "'ss01', 'cv11'" }}
+      >
+        <Link to={buildLocalizedPath(language, "about")} className="text-slate-light hover:text-primary transition-colors duration-200">
+          {t("hero.name")}
+        </Link>
       </h1>
-      <h2 className="text-xl md:text-2xl font-medium text-slate-light mb-4 tracking-tight">
-        Front End Engineer
+      <h2 
+        className="text-lg md:text-xl font-sans font-medium text-slate-light mb-4 tracking-tight"
+        style={{ fontFeatureSettings: "'ss01', 'cv11'" }}
+      >
+        {t("hero.title")}
       </h2>
-      <p className="text-slate max-w-xs leading-relaxed">
-        I build accessible, pixel-perfect digital experiences for the web.
+      <p 
+        className="text-slate max-w-xs leading-relaxed"
+        style={{ fontFeatureSettings: "'ss01', 'cv11'" }}
+      >
+        {t("hero.intro")}
       </p>
       
       <div className="flex gap-5 mt-8">

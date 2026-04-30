@@ -1,141 +1,71 @@
 import { ArrowUpRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useLocale } from "@/hooks/use-locale";
+import { cn } from "@/lib/utils";
 
-const projects = [
-    {
-    image: "/Screenshot 2026-02-11 231128.png",
-    title: "Maisam",
-    description:"Design and development of a full-featured website for coach Maisam, offering personalized health and nutrition services for women. The site presents services in a modern, engaging style, including programs for pregnant and breastfeeding women, health workshops, and personal coaching, with a strong focus on a comfortable user experience that reflects the vision of a balanced, healthy lifestyle.",
-    technologies: ["React", "TypeScript", "Tailwind CSS","Figma"],
-    url: "https://proposal-genius.vercel.app/pricing",
-  },
-   {
-    image: "/Screenshot 2026-02-11 230150.png",
-    title: "Offerly",
-    description:"Offerly is an innovative web application that helps businesses and individuals create and analyze proposals quickly and professionally. It features an interactive user interface, advanced pricing tools, and integration with services such as Supabase to enhance the user experience. The project was developed using React and TypeScript, with a modern design built on Tailwind CSS.",
-    technologies: ["React", "TypeScript", "Tailwind CSS","Supabase"],
-    url: "https://proposal-genius.vercel.app/pricing",
-  },
-    {
-    image: "/Screenshot 2026-02-11 225245.png",
-    title: "SakanGaza",
-    description:"Sakan Gaza is a volunteer housing platform that helps displaced people in Gaza find homes for rent or purchase. It features a fully Arabic RTL interface built with React and TypeScript, uses Supabase for authentication and storage, and includes listing management, image uploads, search filters, and admin moderation tools.",
-    technologies: ["React", "TypeScript", "Tailwind CSS","shadcn/ui","Supabase"],
-    url: "https://sakangaza.com/",
-  },
-     {
-    image: "/market.png",
-    title: "MarketPro",
-    description:
-    "Interactive multi-vendor e-commerce UI. Includes product/category pages, dynamic cart, vendor pages, seller dashboard, and key support pages—focused on clean architecture and a smooth user experience.",
-    technologies: ["React", "TypeScript", "Tailwind CSS","shadcn/ui"],
-    url: "https://arise-market-core.vercel.app/",
-  },
-
-   {
-    image: "/state.png",
-    title: "Luxury Real Estate Platform",
-    description:
-    "A modern, interactive web app for showcasing luxury real estate, built to deliver a fast and seamless browsing experience. It simplifies exploring premium properties and services, supports both Arabic and English (RTL/LTR), and features a responsive design with intuitive UI and smooth navigation.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS","shadcn/ui"],
-    url: "https://prime-property-showcase.vercel.app",
-  },
-
-   {
-    image: "/stayle.png",
-    title: "ÉLARA - Timeless Fashion & Conscious Design.",
-    description:
-    "Designed and developed a full e-commerce website for a luxury fashion brand, delivering a modern, elegant UI and a seamless shopping experience. The site includes product and collection pages, a complete shopping cart system, and robust state management, with responsive performance across all devices.",
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
-    url: "https://style-blueprint.vercel.app/",
-  },
-  {
-    image: "/art.png",
-    title: "Artist Lens Hub",
-    description:
-    "portfolio for a contemporary visual artist, designed to showcase abstract artworks in an elegant, gallery-inspired layout. Built with React, Vite, and Tailwind CSS, it features a captivating hero section, a curated gallery experience, and a dedicated contact area for inquiries and commission requests, all optimized for a smooth and immersive user experience.",
-    technologies: ["React", "API", "Tailwind CSS"],
-    url: "https://artist-lens-hub-kqu1.vercel.app/",
-  },
-  
-
-
-
-  {
-    image: "/Screenshot 2025-12-01 122458.png",
-    title: "Vertex AI",
-    description: 
-    "Vertex AI is a modern website designed for a digital agency specializing in artificial intelligence solutions and web development. It delivers a fast, contemporary user experience with elegant interfaces and smooth animations that reflect the agency’s technological identity.",
-    technologies: ["React", "tailwindcss","TypeScript", "shadcn/ui","Framer Motion","TanStack Query"],
-    url: "https://vertex-ai-peach.vercel.app/",
-  },
-  {
-    image: "/1.png",
-    title: "Digital Library",
-    description: "A modern digital publishing platform built with React and TypeScript. It combines a social blog feed, knowledge wiki, and digital bookstore within a sleek, high-performance interface. The platform features a fully responsive Tailwind-powered design, multi-language support (i18n), and a content-focused user experience.",
-    technologies: ["React", "tailwindcss","TypeScript", "i18n"],
-    url: "https://pure-scribe-muse2.vercel.app/",
-  },
-  {
-    image: "/2.png",
-    title: "Dashboard",
-    description:
-    "An administrative dashboard designed for data visualization, management, and monitoring of key performance indicators (KPIs). It likely features charts, tables, and user management tools.",
-    technologies: ["React", "Material UI", "Chart.js"],
-    url: "https://dashboard-swart-two-88.vercel.app/",
-  },
-  {
-    image: "/3.png",
-    title: "Tshtri",
-    description:
-    "Tshtri is a comprehensive e-commerce platform that offers a seamless shopping experience. It features a user-friendly interface, secure payment gateways, and robust inventory management, making it easy for businesses to sell products online.",
-    technologies: ["html", "css", "bootstrap","JavaScript"],
-    url: "https://tshtri.vercel.app/",
-  },
-
- 
-   
-   
-];
+type Project = {
+  image: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  url?: string;
+};
 
 export const Projects = () => {
+  const { t } = useTranslation();
+  const { isRtl } = useLocale();
+  const projects = t("projects.items", { returnObjects: true }) as Project[];
+  const iconClassName = cn(
+    "ms-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform motion-reduce:transition-none",
+    isRtl
+      ? "group-hover/link:-translate-x-1 group-hover/link:-translate-y-1 group-focus-visible/link:-translate-x-1 group-focus-visible/link:-translate-y-1"
+      : "group-hover/link:translate-x-1 group-hover/link:-translate-y-1 group-focus-visible/link:translate-x-1 group-focus-visible/link:-translate-y-1",
+  );
+
   return (
     <section id="projects" className="mb-16 scroll-mt-16 lg:mb-36">
       <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-slate-light">
-          Projects
+        <h2 className="section-heading">
+          {t("projects.sectionTitle")}
         </h2>
       </div>
 
       <div>
         <ul className="group/list">
-          {projects.map((project, index) => (
-            <li key={index} className="mb-12">
+          {projects.map((project) => (
+            <li key={project.title} className="mb-12">
               <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                 <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-lg transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-light/[0.03] lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
 
                 <div className="z-10 sm:order-2 sm:col-span-6">
                   <h3>
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-baseline font-medium leading-tight text-slate-light hover:text-primary focus-visible:text-primary group/link text-base"
-                    >
-                      <span className="absolute -inset-x-4 -inset-y-2.5 rounded lg:-inset-x-6 block" />
-                      <span>
+                    {project.url ? (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group/link inline-flex items-baseline font-medium leading-tight text-slate-light hover:text-primary focus-visible:text-primary text-base"
+                      >
+                        <span className="absolute -inset-x-4 -inset-y-2.5 rounded lg:-inset-x-6 block" />
+                        <span>
+                          {project.title}
+                          <ArrowUpRight className={iconClassName} />
+                        </span>
+                      </a>
+                    ) : (
+                      <span className="font-medium leading-tight text-slate-light text-base">
                         {project.title}
-                        <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" />
                       </span>
-                    </a>
+                    )}
                   </h3>
 
-                  <p className="mt-2 text-sm leading-normal text-slate">
+                  <p className="mt-2 text-sm leading-normal text-slate font-light">
                     {project.description}
                   </p>
 
-                  <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
+                  <ul className="mt-2 flex flex-wrap" aria-label={t("common.technologiesUsed")}>
                     {project.technologies.map((tech) => (
-                      <li key={tech} className="mr-1.5 mt-2">
+                      <li key={tech} className="me-1.5 mt-2">
                         <div className="flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium leading-5 text-primary">
                           {tech}
                         </div>
@@ -154,18 +84,6 @@ export const Projects = () => {
             </li>
           ))}
         </ul>
-
-        {/* <div className="mt-12">
-          <a
-            href="/archive"
-            className="inline-flex items-center font-medium leading-tight text-slate-light group"
-          >
-            <span className="border-b border-transparent pb-px transition group-hover:border-primary motion-reduce:transition-none">
-              View Full Project Archive
-            </span>
-            <ArrowUpRight className="ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-focus-visible:-translate-y-1 group-focus-visible:translate-x-1 motion-reduce:transition-none" />
-          </a>
-        </div> */}
       </div>
     </section>
   );

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Athar project preview</title>
+  <desc id="desc">A bilingual creative portfolio and CMS preview for Athar.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#141414"/>
+      <stop offset="0.52" stop-color="#24201b"/>
+      <stop offset="1" stop-color="#0d302c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d6a85f"/>
+      <stop offset="1" stop-color="#76c7b7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <rect x="58" y="50" width="1084" height="660" rx="24" fill="#f7f1e8"/>
+  <rect x="58" y="50" width="1084" height="88" rx="24" fill="#171717"/>
+  <circle cx="106" cy="94" r="10" fill="#d6a85f"/>
+  <circle cx="138" cy="94" r="10" fill="#76c7b7"/>
+  <circle cx="170" cy="94" r="10" fill="#f7f1e8"/>
+  <text x="238" y="104" fill="#f7f1e8" font-family="Arial, sans-serif" font-size="24" font-weight="700">ATHAR / اثر</text>
+  <text x="962" y="104" fill="#f7f1e8" font-family="Arial, sans-serif" font-size="18">AR / EN</text>
+  <text x="118" y="235" fill="#171717" font-family="Arial, sans-serif" font-size="72" font-weight="700">Athar</text>
+  <text x="118" y="303" fill="#171717" font-family="Arial, sans-serif" font-size="44" font-weight="700">Creative Portfolio &amp; CMS</text>
+  <text x="118" y="356" fill="#5f584f" font-family="Arial, sans-serif" font-size="24">Creative consulting, event design, and brand experiences.</text>
+  <rect x="118" y="408" width="210" height="56" rx="28" fill="url(#accent)"/>
+  <text x="158" y="445" fill="#171717" font-family="Arial, sans-serif" font-size="20" font-weight="700">View Works</text>
+  <rect x="118" y="535" width="220" height="84" rx="16" fill="#ffffff"/>
+  <rect x="368" y="535" width="220" height="84" rx="16" fill="#ffffff"/>
+  <rect x="618" y="535" width="220" height="84" rx="16" fill="#ffffff"/>
+  <text x="142" y="569" fill="#171717" font-family="Arial, sans-serif" font-size="18" font-weight="700">Workshops</text>
+  <text x="392" y="569" fill="#171717" font-family="Arial, sans-serif" font-size="18" font-weight="700">Projects</text>
+  <text x="642" y="569" fill="#171717" font-family="Arial, sans-serif" font-size="18" font-weight="700">Admin Panel</text>
+  <path d="M914 232c72 0 130 58 130 130s-58 130-130 130-130-58-130-130 58-130 130-130Z" fill="#171717"/>
+  <path d="M826 356c48-70 128-89 202-48-45 70-126 92-202 48Z" fill="url(#accent)"/>
+  <path d="M844 421c62 19 120 7 174-36-7 68-55 116-122 116-29 0-54-9-52-80Z" fill="#d6a85f" opacity="0.78"/>
+</svg>

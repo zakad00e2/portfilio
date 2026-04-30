@@ -3,21 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Developer & Designer</title>
-    <meta name="description" content="Portfolio of a creative developer" />
-    <meta name="author" content="Developer Portfolio" />
+    <script>
+      (function () {
+        try {
+          var pathLanguage = window.location.pathname.split("/").filter(Boolean)[0];
+          var storedLanguage = window.localStorage.getItem("zakaria-portfolio-language");
+          var language =
+            pathLanguage === "ar" || pathLanguage === "en"
+              ? pathLanguage
+              : storedLanguage === "ar" || storedLanguage === "en"
+                ? storedLanguage
+                : "en";
+
+          document.documentElement.lang = language;
+          document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+        } catch (error) {
+          document.documentElement.lang = "en";
+          document.documentElement.dir = "ltr";
+        }
+      })();
+    </script>
+    <title>Zakaria Safi | Front-End Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Zakaria Safi, a front-end engineer building accessible, pixel-perfect web experiences."
+    />
+    <meta name="author" content="Zakaria Safi" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
-    <meta property="og:title" content="b56e9a3a-866e-4e42-97b4-5039ca24240d" />
+    <meta property="og:title" content="Zakaria Safi | Front-End Engineer" />
     <meta
       property="og:description"
-      content="Portfolio of a creative developer"
+      content="Portfolio of Zakaria Safi, a front-end engineer building accessible, pixel-perfect web experiences."
     />
     <meta property="og:type" content="website" />
 
