@@ -9,12 +9,14 @@ import { Navigation } from "@/components/portfolio/Navigation";
 import { MouseFollower } from "@/components/portfolio/MouseFollower";
 import { LanguageSwitcher } from "@/components/portfolio/LanguageSwitcher";
 import { LocalizedSeo } from "@/components/portfolio/LocalizedSeo";
+import { useGsapReveal } from "@/hooks/use-gsap-reveal";
 import { isLanguage, isSectionSlug, setStoredLanguage } from "@/i18n/locales";
 
 const Index = () => {
   const { i18n, t } = useTranslation();
   const { lang, section } = useParams();
   const location = useLocation();
+  useGsapReveal();
 
   useEffect(() => {
     if (!isLanguage(lang)) {
@@ -57,7 +59,7 @@ const Index = () => {
     <div className="min-h-screen bg-background relative">
       <LocalizedSeo />
       <MouseFollower />
-      <div className="fixed right-4 top-4 z-40 md:right-8 lg:right-10">
+      <div className="fixed left-4 top-4 z-40 md:left-8 lg:left-10">
         <LanguageSwitcher />
       </div>
       <a

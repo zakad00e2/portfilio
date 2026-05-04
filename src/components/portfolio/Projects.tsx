@@ -18,7 +18,7 @@ export const Projects = () => {
   const iconClassName = cn(
     "ms-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform motion-reduce:transition-none",
     isRtl
-      ? "group-hover/link:-translate-x-1 group-hover/link:-translate-y-1 group-focus-visible/link:-translate-x-1 group-focus-visible/link:-translate-y-1"
+      ? "-scale-x-100 group-hover/link:-translate-x-1 group-hover/link:-translate-y-1 group-focus-visible/link:-translate-x-1 group-focus-visible/link:-translate-y-1"
       : "group-hover/link:translate-x-1 group-hover/link:-translate-y-1 group-focus-visible/link:translate-x-1 group-focus-visible/link:-translate-y-1",
   );
 
@@ -33,7 +33,7 @@ export const Projects = () => {
       <div>
         <ul className="group/list">
           {projects.map((project) => (
-            <li key={project.title} className="mb-12">
+            <li key={project.title} className="mb-12" data-gsap-reveal>
               <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                 <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-lg transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-light/[0.03] lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
 

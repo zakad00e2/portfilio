@@ -1,37 +1,79 @@
 import { Github, Linkedin, Instagram } from "lucide-react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import gsap from "gsap";
 import { useLocale } from "@/hooks/use-locale";
 import { buildLocalizedPath } from "@/i18n/locales";
 
 export const Hero = () => {
   const { t } = useTranslation();
   const { language } = useLocale();
+  const heroRef = useRef<HTMLDivElement>(null);
+  const heroName = t("hero.name");
+  const isLatinHeroName = /^[\p{Script=Latin}\s]+$/u.test(heroName);
+
+  useEffect(() => {
+    const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    if (reduceMotionQuery.matches) {
+      gsap.set("[data-gsap-hero]", { autoAlpha: 1, y: 0 });
+      return;
+    }
+
+    const context = gsap.context(() => {
+      gsap.fromTo(
+        "[data-gsap-hero]",
+        { autoAlpha: 0, y: 24 },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.85,
+          ease: "power3.out",
+          stagger: 0.11,
+          delay: 0.08,
+        },
+      );
+    }, heroRef);
+
+    return () => context.revert();
+  }, []);
 
   return (
-    <div className="flex min-h-screen flex-col justify-center lg:block lg:min-h-0">
+    <div ref={heroRef} className="flex min-h-screen flex-col justify-center lg:block lg:min-h-0">
       <h1 
+        data-gsap-hero
         className="text-[clamp(2.5rem,8vw,3rem)] font-serif font-bold leading-[1.1] mb-3"
-        style={{ fontFeatureSettings: "'ss01', 'cv11'" }}
+        style={{
+          fontFamily: isLatinHeroName ? "'Inter', system-ui, -apple-system, sans-serif" : undefined,
+          fontFeatureSettings: "'ss01', 'cv11'",
+        }}
       >
-        <Link to={buildLocalizedPath(language, "about")} className="text-slate-light hover:text-primary transition-colors duration-200">
-          {t("hero.name")}
+        <Link
+          to={buildLocalizedPath(language, "about")}
+          className="text-slate-light hover:text-primary transition-colors duration-200"
+          dir={isLatinHeroName ? "ltr" : undefined}
+          lang={isLatinHeroName ? "en" : undefined}
+        >
+          {heroName}
         </Link>
       </h1>
       <h2 
+        data-gsap-hero
         className="text-lg md:text-xl font-sans font-medium text-slate-light mb-4 tracking-tight"
         style={{ fontFeatureSettings: "'ss01', 'cv11'" }}
       >
         {t("hero.title")}
       </h2>
       <p 
+        data-gsap-hero
         className="text-slate max-w-xs leading-relaxed"
         style={{ fontFeatureSettings: "'ss01', 'cv11'" }}
       >
         {t("hero.intro")}
       </p>
       
-      <div className="flex gap-5 mt-8">
+      <div data-gsap-hero className="flex gap-5 mt-8">
         <a 
           href="https://github.com/zakad00e2" 
           target="_blank" 

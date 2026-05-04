@@ -105,7 +105,7 @@ export const resources = {
             description:
               "Design and development of a full-featured website for coach Maisam, offering personalized health and nutrition services for women. The site presents services in a modern, engaging style, including programs for pregnant and breastfeeding women, health workshops, and personal coaching, with a strong focus on a comfortable user experience that reflects the vision of a balanced, healthy lifestyle.",
             technologies: ["React", "TypeScript", "Tailwind CSS", "Figma"],
-            url: "https://proposal-genius.vercel.app/pricing",
+            url: "https://www.withmaysam.com/",
           },
           {
             image: "/Screenshot 2026-02-11 225245.png",
@@ -197,7 +197,7 @@ export const resources = {
       },
       navigation: {
         ariaLabel: "التنقل داخل الصفحة",
-        about: "نبذة",
+        about: "نبذة عني",
         experience: "الخبرات",
         projects: "المشاريع",
       },
@@ -207,7 +207,7 @@ export const resources = {
         intro: "أبني تجارب رقمية سهلة الوصول، دقيقة بصرياً، ومصممة بعناية للويب.",
       },
       about: {
-        sectionTitle: "نبذة",
+        sectionTitle: "نبذة عني",
         paragraphs: [
           "أنا مطور واجهات أمامية شغوف ببناء واجهات مستخدم سهلة الوصول ودقيقة في تفاصيلها، تجمع بين التصميم المدروس والهندسة المتينة. أعمل في المساحة التي يلتقي فيها التصميم بالتطوير، حيث تتحول الأفكار الإبداعية إلى تجارب واضحة، أنيقة، وسريعة الاستخدام.",
           "أعمل حالياً كمطور واجهات أمامية مستقل، وأقدم حلول ويب مخصصة لعملاء من قطاعات مختلفة. أركز على بناء واجهات عالية الجودة وسهلة الاستخدام ومتوافقة مع معايير الويب الحديثة، مع اهتمام خاص بإمكانية الوصول حتى تكون التجربة شاملة ومريحة لجميع المستخدمين.",
@@ -286,7 +286,7 @@ export const resources = {
             description:
               "تصميم وتطوير موقع متكامل للمدربة ميسم، يعرض خدمات الصحة والتغذية المخصصة للنساء. يقدم الموقع البرامج والخدمات بأسلوب حديث وجذاب، بما في ذلك برامج الحوامل والمرضعات، الورش الصحية، والتدريب الشخصي، مع تجربة استخدام مريحة تعكس رؤية حياة صحية ومتوازنة.",
             technologies: ["React", "TypeScript", "Tailwind CSS", "Figma"],
-            url: "https://proposal-genius.vercel.app/pricing",
+            url: "https://www.withmaysam.com/",
           },
           {
             image: "/Screenshot 2026-02-11 225245.png",

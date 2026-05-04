@@ -14,7 +14,9 @@ export const About = () => {
 
       <div className="space-y-4 text-slate leading-relaxed">
         {paragraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
+          <p key={paragraph} data-gsap-reveal>
+            {paragraph}
+          </p>
         ))}
       </div>
     </section>
