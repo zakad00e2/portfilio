@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zakaria Anwar Safi - CV</title>
+    <style>
+      :root {
+        --ink: #0f172a;
+        --text: #334155;
+        --muted: #64748b;
+        --line: #cbd5e1;
+        --soft-line: #e2e8f0;
+        --accent: #0f766e;
+        --accent-soft: #e6fffa;
+        --panel: #f8fafc;
+      }
+
+      @page {
+        size: A4;
+        margin: 11mm 11mm 12mm;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #e5e7eb;
+        color: var(--text);
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 9.35pt;
+        line-height: 1.34;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        background: white;
+        padding: 11mm 11mm 12mm;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: 1fr 60mm;
+        gap: 10mm;
+        border-bottom: 2px solid var(--accent);
+        padding-bottom: 5mm;
+        margin-bottom: 5.5mm;
+      }
+
+      h1 {
+        margin: 0 0 1.5mm;
+        color: var(--ink);
+        font-size: 22pt;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .role {
+        margin: 0 0 2mm;
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 10.8pt;
+      }
+
+      .tagline {
+        margin: 0;
+        color: var(--muted);
+        font-style: italic;
+        font-size: 9.3pt;
+      }
+
+      .contact {
+        text-align: right;
+        font-size: 8.7pt;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 50mm 1fr;
+        gap: 8mm;
+        align-items: start;
+      }
+
+      aside {
+        border-right: 1px solid var(--soft-line);
+        padding-right: 5mm;
+      }
+
+      section {
+        margin-bottom: 4.6mm;
+      }
+
+      aside section {
+        break-inside: avoid;
+      }
+
+      .main section {
+        margin-bottom: 4.2mm;
+      }
+
+      h2 {
+        margin: 0 0 2.2mm;
+        padding-bottom: 1.2mm;
+        border-bottom: 1px solid var(--line);
+        color: var(--accent);
+        font-size: 9pt;
+        line-height: 1.2;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        break-after: avoid;
+      }
+
+      h3 {
+        margin: 0;
+        color: var(--ink);
+        font-size: 10pt;
+        line-height: 1.25;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 8.5pt;
+        white-space: nowrap;
+      }
+
+      .entry {
+        break-inside: avoid;
+        margin-bottom: 3.2mm;
+      }
+
+      .entry-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 5mm;
+        align-items: baseline;
+        margin-bottom: 1mm;
+      }
+
+      p {
+        margin: 0 0 2.2mm;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0 0 0 4mm;
+      }
+
+      li {
+        margin-bottom: 1mm;
+        padding-left: 0.7mm;
+      }
+
+      .summary {
+        color: var(--text);
+        font-size: 9.25pt;
+      }
+
+      .skill-block {
+        margin-bottom: 3mm;
+        padding: 2.4mm 2.7mm;
+        border: 1px solid var(--soft-line);
+        background: var(--panel);
+      }
+
+      .skill-title {
+        display: block;
+        margin-bottom: 1.1mm;
+        color: var(--accent);
+        font-size: 8.2pt;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .skill-text {
+        color: var(--text);
+        font-size: 8.4pt;
+      }
+
+      .project {
+        break-inside: avoid;
+        margin-bottom: 2.9mm;
+      }
+
+      .project h3 {
+        font-size: 9.5pt;
+        display: flex;
+        justify-content: space-between;
+        gap: 4mm;
+      }
+
+      .project p {
+        margin-bottom: 0.9mm;
+        font-size: 8.75pt;
+      }
+
+      .tech {
+        color: var(--muted);
+        font-size: 8.25pt;
+      }
+
+      .tech strong {
+        color: var(--accent);
+      }
+
+      .soft-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5mm;
+        margin-top: 1.5mm;
+      }
+
+      .pill {
+        padding: 1mm 1.8mm;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 8pt;
+        font-weight: 700;
+      }
+
+      .compact p {
+        margin-bottom: 1.3mm;
+      }
+
+      .cert-list li,
+      .side-list li {
+        font-size: 8.45pt;
+        margin-bottom: 1.25mm;
+      }
+
+      .quote {
+        border-left: 2px solid var(--accent);
+        padding-left: 2.4mm;
+        color: var(--muted);
+        font-size: 8.5pt;
+        font-style: italic;
+      }
+
+      .print-footer {
+        margin-top: 4mm;
+        padding-top: 2mm;
+        border-top: 1px solid var(--soft-line);
+        color: var(--muted);
+        font-size: 8pt;
+        text-align: center;
+      }
+
+      @media print {
+        body {
+          background: white;
+        }
+
+        .page {
+          width: auto;
+          min-height: auto;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <div>
+          <h1>ZAKARIA ANWAR SAFI</h1>
+          <p class="role">Front-End Engineer | React & TypeScript Developer | UI-Focused Web Developer</p>
+          <p class="tagline">I build accessible, pixel-perfect digital experiences for the web.</p>
+        </div>
+        <div class="contact">
+          Palestine | +970 597 986 160<br />
+          <a href="mailto:z409483831@gmail.com">z409483831@gmail.com</a><br />
+          <a href="https://github.com/zakad00e2">github.com/zakad00e2</a><br />
+          <a href="https://www.linkedin.com/in/zakariasafi/">linkedin.com/in/zakariasafi</a><br />
+          <a href="https://www.forlanso.com/ar/zkrya-safy">forlanso.com/ar/zkrya-safy</a>
+        </div>
+      </header>
+
+      <div class="layout">
+        <aside>
+          <section>
+            <h2>Core Skills</h2>
+            <div class="skill-block">
+              <span class="skill-title">Frontend</span>
+              <span class="skill-text">React.js, TypeScript, JavaScript (ES6+), Next.js, Vite, HTML5, CSS3</span>
+            </div>
+            <div class="skill-block">
+              <span class="skill-title">UI Systems</span>
+              <span class="skill-text">Tailwind CSS, shadcn/ui, Material UI, Bootstrap, Responsive Design, Accessibility, SEO</span>
+            </div>
+            <div class="skill-block">
+              <span class="skill-title">Tools</span>
+              <span class="skill-text">REST APIs, Supabase, GSAP, Framer Motion, TanStack Query, Git, GitHub, Figma</span>
+            </div>
+          </section>
+
+          <section class="compact">
+            <h2>Education</h2>
+            <p><strong>University of Palestine</strong></p>
+            <p>Bachelor of Science in Software Engineering</p>
+            <p>2025 | Graduated with Distinction</p>
+            <p>Relevant coursework: Web Application Development, Database Systems, HCI, Algorithms & Data Structures, Cloud Computing, System Design.</p>
+          </section>
+
+          <section>
+            <h2>Certifications</h2>
+            <ul class="cert-list">
+              <li>React Development - Udemy (Jonas Schmedtmann)</li>
+              <li>HTML/CSS/JavaScript Fundamentals - Mohammed Qumboz</li>
+              <li>Responsive Web Design - FreeCodeCamp</li>
+            </ul>
+          </section>
+
+          <section class="compact">
+            <h2>Languages</h2>
+            <p>Arabic: Native</p>
+            <p>English: Fluent</p>
+          </section>
+
+          <section>
+            <h2>Strengths</h2>
+            <div class="soft-list">
+              <span class="pill">Analytical Thinking</span>
+              <span class="pill">Collaboration</span>
+              <span class="pill">Communication</span>
+              <span class="pill">Problem Solving</span>
+              <span class="pill">Adaptability</span>
+              <span class="pill">Self-Learning</span>
+            </div>
+          </section>
+
+          <section>
+            <h2>Design Philosophy</h2>
+            <p class="quote">Great interfaces are built where thoughtful design meets solid engineering: accessible, polished, intuitive, and reliable across devices.</p>
+          </section>
+        </aside>
+
+        <div class="main">
+          <section>
+            <h2>Career Summary</h2>
+            <p class="summary">Front-End Engineer specializing in accessible, pixel-perfect, high-performance web experiences using React, TypeScript, Next.js, Tailwind CSS, and modern UI systems. Experienced in delivering responsive portfolio, business, tourism, e-commerce, CMS, housing, and dashboard interfaces for real clients and production projects. Skilled in creating polished UI components, integrating APIs, optimizing performance, and translating client goals into professional digital products.</p>
+          </section>
+
+          <section>
+            <h2>Professional Experience</h2>
+
+            <div class="entry">
+              <div class="entry-head">
+                <h3>Freelance Front-End Developer - Forlanso / Remote</h3>
+                <span class="meta">2024 - Present</span>
+              </div>
+              <ul>
+                <li>Delivered responsive, modern web interfaces for portfolio, business, tourism, e-commerce, and creative-industry clients.</li>
+                <li>Built polished UI components and production-ready pages with React, TypeScript, Tailwind CSS, and Next.js.</li>
+                <li>Improved performance, accessibility, responsiveness, visual consistency, and client satisfaction through direct collaboration.</li>
+              </ul>
+              <p class="tech"><strong>Tech:</strong> JavaScript, TypeScript, React, Tailwind CSS, Next.js</p>
+            </div>
+
+            <div class="entry">
+              <div class="entry-head">
+                <h3>Front-End Developer - Personal & Open-Source Projects</h3>
+                <span class="meta">2023 - 2024</span>
+              </div>
+              <ul>
+                <li>Built responsive landing pages, interactive UI components, dashboards, and API-powered applications.</li>
+                <li>Focused on reusable components, clean front-end architecture, modern JavaScript patterns, and cross-browser compatibility.</li>
+              </ul>
+              <p class="tech"><strong>Tech:</strong> JavaScript, Git, CSS3, REST APIs</p>
+            </div>
+
+            <div class="entry">
+              <div class="entry-head">
+                <h3>Front-End Volunteer Developer - Community Projects</h3>
+                <span class="meta">2023</span>
+              </div>
+              <ul>
+                <li>Collaborated with small teams to build pages for community and student initiatives, including contact forms, simple dashboards, and blog layouts.</li>
+                <li>Supported responsive layout work, UI bug fixes, deployment updates, and improvements based on user feedback.</li>
+              </ul>
+              <p class="tech"><strong>Tech:</strong> HTML, CSS, Bootstrap, UI Debugging, GitHub</p>
+            </div>
+
+            <div class="entry">
+              <div class="entry-head">
+                <h3>Web Development Intern</h3>
+                <span class="meta">2022 - 2024</span>
+              </div>
+              <ul>
+                <li>Assisted in maintaining front-end components for academic and small business projects.</li>
+                <li>Debugged JavaScript features and improved website speed, responsiveness, and front-end stability.</li>
+              </ul>
+              <p class="tech"><strong>Tech:</strong> React, HTML, CSS, Git, JavaScript</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Selected Projects</h2>
+
+            <div class="project">
+              <h3>Athr - Bilingual Portfolio & CMS Platform <a href="https://www.leaveanathr.com/">Live</a></h3>
+              <p>Built a bilingual portfolio and CMS platform for Dema, including Arabic/English public pages, project and workshop content, smooth interactive motion, and a custom admin panel.</p>
+              <p class="tech"><strong>Tech:</strong> React, TypeScript, Tailwind CSS, GSAP, Framer Motion, Vite</p>
+            </div>
+
+            <div class="project">
+              <h3>Oday Tourism - Multilingual Tourism Booking Platform <a href="https://www.odaytourism.com/ar">Live</a></h3>
+              <p>Developed a tourism platform for browsing and booking hotels, travel programs, and airport reception services, with booking cart flow and a complete admin dashboard.</p>
+              <p class="tech"><strong>Tech:</strong> Next.js, React, TypeScript, Tailwind CSS, Node.js</p>
+            </div>
+
+            <h2>More Project Work</h2>
+
+            <div class="project">
+              <h3>SakanGaza - Volunteer Housing Platform <a href="https://sakangaza.com/">Live</a></h3>
+              <p>Built an Arabic RTL platform helping displaced people in Gaza find homes for rent or purchase, including authentication, storage, listings, image uploads, filters, and moderation tools.</p>
+              <p class="tech"><strong>Tech:</strong> React, TypeScript, Tailwind CSS, shadcn/ui, Supabase</p>
+            </div>
+
+            <div class="project">
+              <h3>MarketPro - Multi-Vendor E-Commerce UI <a href="https://arise-market-core.vercel.app/">Live</a></h3>
+              <p>Created a multi-vendor commerce interface with product/category pages, dynamic cart, vendor pages, seller dashboard, and support pages.</p>
+              <p class="tech"><strong>Tech:</strong> React, TypeScript, Tailwind CSS, shadcn/ui</p>
+            </div>
+
+            <div class="project">
+              <h3>ELARA - Fashion E-Commerce Website <a href="https://style-blueprint.vercel.app/">Live</a></h3>
+              <p>Designed and developed a luxury fashion e-commerce website with product and collection pages, cart functionality, state management, and responsive performance.</p>
+              <p class="tech"><strong>Tech:</strong> React, TypeScript, Tailwind CSS</p>
+            </div>
+
+            <div class="project">
+              <h3>Vertex AI - Digital Agency Website <a href="https://vertex-ai-peach.vercel.app/">Live</a></h3>
+              <p>Built a modern agency website for AI solutions and web development with fast pages, elegant UI composition, and smooth animations.</p>
+              <p class="tech"><strong>Tech:</strong> React, TypeScript, Tailwind CSS, shadcn/ui, Framer Motion, TanStack Query</p>
+            </div>
+
+            <div class="project">
+              <h3>Dashboard - Administrative Analytics Interface <a href="https://dashboard-swart-two-88.vercel.app/">Live</a></h3>
+              <p>Developed a dashboard for data visualization, KPI monitoring, charts, tables, and user-management workflows.</p>
+              <p class="tech"><strong>Tech:</strong> React, Material UI, Chart.js</p>
+            </div>
+          </section>
+
+          <div class="print-footer">Zakaria Anwar Safi | Front-End Engineer</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
