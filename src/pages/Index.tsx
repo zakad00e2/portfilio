@@ -59,7 +59,7 @@ const Index = () => {
     <div className="min-h-screen bg-background relative">
       <LocalizedSeo />
       <MouseFollower />
-      <div className="fixed left-4 top-4 z-40 md:left-8 lg:left-10">
+      <div className="language-switcher-position fixed top-4 z-40">
         <LanguageSwitcher />
       </div>
       <a

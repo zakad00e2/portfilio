@@ -129,6 +129,42 @@ All colors MUST be HSL.
 }
 
 @layer components {
+  .language-switcher-position {
+    width: max-content;
+    left: 1rem;
+  }
+
+  .language-switcher-type {
+    font-family: 'Thmanyah Serif Display', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  html[lang="en"] .language-switcher-position {
+    right: 1rem;
+    left: auto;
+  }
+
+  @media (min-width: 768px) {
+    .language-switcher-position {
+      left: 2rem;
+    }
+
+    html[lang="en"] .language-switcher-position {
+      right: 2rem;
+      left: auto;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .language-switcher-position,
+    html[lang="en"] .language-switcher-position {
+      right: auto;
+      left: 2.5rem;
+    }
+  }
+
   .inline-link {
     @apply relative text-slate-light font-semibold transition-colors duration-200;
     text-decoration: none;

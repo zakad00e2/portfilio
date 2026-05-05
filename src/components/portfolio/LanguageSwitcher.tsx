@@ -12,7 +12,7 @@ export const LanguageSwitcher = () => {
 
   return (
     <div
-      className="inline-flex rounded-full border border-slate-light/10 bg-navy-light/80 p-1 text-xs font-medium shadow-lg shadow-background/20 backdrop-blur"
+      className="language-switcher-type inline-flex rounded-full border border-slate-light/10 bg-navy-light/80 p-1 shadow-lg shadow-background/20 backdrop-blur"
       role="group"
       dir="ltr"
       aria-label={t("common.languageSwitcher")}

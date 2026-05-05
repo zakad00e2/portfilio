@@ -3,15 +3,15 @@ export const languageStorageKey = "zakaria-portfolio-language";
 export const languages = {
   en: {
     code: "en",
-    label: "English",
-    nativeName: "English",
+    label: "EN",
+    nativeName: "EN",
     dir: "ltr",
     locale: "en_US",
   },
   ar: {
     code: "ar",
     label: "Arabic",
-    nativeName: "العربية",
+    nativeName: "ع",
     dir: "rtl",
     locale: "ar_AR",
   },
