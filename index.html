@@ -17,6 +17,22 @@
 
           document.documentElement.lang = language;
           document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+
+          if (language === "ar") {
+            [
+              "/fonts/thmanyahsans-Regular.woff2",
+              "/fonts/thmanyahsans-Medium.woff2",
+              "/fonts/thmanyahserifdisplay-Bold.woff2",
+            ].forEach(function (href) {
+              var preload = document.createElement("link");
+              preload.rel = "preload";
+              preload.as = "font";
+              preload.type = "font/woff2";
+              preload.href = href;
+              preload.crossOrigin = "anonymous";
+              document.head.appendChild(preload);
+            });
+          }
         } catch (error) {
           document.documentElement.lang = "en";
           document.documentElement.dir = "ltr";
@@ -33,7 +49,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
