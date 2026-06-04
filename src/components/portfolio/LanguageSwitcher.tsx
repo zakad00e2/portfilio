@@ -1,14 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useLocale } from "@/hooks/use-locale";
-import { buildLocalizedPath, getCurrentSection, languageCodes, languages, setStoredLanguage } from "@/i18n/locales";
+import { buildLocalizedPath, getSectionFromPath, languageCodes, languages, setStoredLanguage } from "@/i18n/locales";
 import { cn } from "@/lib/utils";
 
 export const LanguageSwitcher = () => {
   const location = useLocation();
   const { t } = useTranslation();
   const { language } = useLocale();
-  const section = getCurrentSection(location.pathname);
+  const section = getSectionFromPath(location.pathname);
 
   return (
     <div

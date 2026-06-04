@@ -30,7 +30,7 @@ export const resources = {
         paragraphs: [
           "I am a passionate Front-End Developer who loves crafting accessible, pixel-perfect user interfaces that combine thoughtful design with solid engineering. I enjoy working at the intersection of design and development, where creativity meets precision, and I take pride in building digital experiences that are visually refined, intuitive, and optimized for performance and usability.",
           "Currently, I work as a Freelance Front-End Developer, delivering custom web solutions for clients across different industries. I focus on creating high-quality, user-friendly interfaces that adhere to modern web standards, with a strong emphasis on accessibility to ensure an inclusive experience for all users. My work includes designing and developing polished UI components, optimizing performance, and integrating front-end applications with APIs to deliver complete, professional solutions.",
-          "Recently, I graduated with Distinction in Software Engineering, a journey that provided me with a solid foundation in software development principles, system design, and data structures. Throughout my studies, I worked on multiple hands-on projects that allowed me to apply theoretical knowledge in real development environments, further strengthening my passion for building interactive, high-quality web experiences.",
+          "Through my work, I have developed practical experience in turning ideas and requirements into clear, professional digital products, from understanding client needs and user experience to building responsive, well-structured, and scalable interfaces. I approach every project with a balance of visual detail, code quality, and final experience performance, aiming to deliver websites and applications that not only look good but also work efficiently and serve their purpose clearly.",
         ],
       },
       experience: {
@@ -211,7 +211,7 @@ export const resources = {
         paragraphs: [
           "أنا مطور واجهات أمامية شغوف ببناء واجهات مستخدم سهلة الوصول ودقيقة في تفاصيلها، تجمع بين التصميم المدروس والهندسة المتينة. أعمل في المساحة التي يلتقي فيها التصميم بالتطوير، حيث تتحول الأفكار الإبداعية إلى تجارب واضحة، أنيقة، وسريعة الاستخدام.",
           "أعمل حالياً كمطور واجهات أمامية مستقل، وأقدم حلول ويب مخصصة لعملاء من قطاعات مختلفة. أركز على بناء واجهات عالية الجودة وسهلة الاستخدام ومتوافقة مع معايير الويب الحديثة، مع اهتمام خاص بإمكانية الوصول حتى تكون التجربة شاملة ومريحة لجميع المستخدمين.",
-          "تخرجت مؤخراً بتقدير امتياز من كلية هندسة البرمجيات، وهي تجربة منحتني أساساً قوياً في مبادئ تطوير البرمجيات، تصميم الأنظمة، وهياكل البيانات. خلال الدراسة عملت على مشاريع تطبيقية متعددة ساعدتني على تحويل المعرفة النظرية إلى حلول عملية، وزادت شغفي ببناء تجارب ويب تفاعلية واحترافية.",
+          "خلال عملي، طورت خبرة عملية في تحويل الأفكار والمتطلبات إلى منتجات رقمية واضحة واحترافية، من فهم احتياج العميل وتجربة المستخدم، إلى بناء واجهات متجاوبة، منظمة، وقابلة للتطوير. أتعامل مع كل مشروع بعين تجمع بين التفاصيل البصرية، جودة الكود، وأداء التجربة النهائية، بهدف تقديم مواقع وتطبيقات لا تبدو جيدة فقط، بل تعمل بكفاءة وتخدم الهدف منها بوضوح.",
         ],
       },
       experience: {

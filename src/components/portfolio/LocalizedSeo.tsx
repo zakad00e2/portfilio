@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useLocale } from "@/hooks/use-locale";
-import { buildLocalizedPath, getCurrentSection, languageCodes, languages } from "@/i18n/locales";
+import { buildLocalizedPath, getSectionFromPath, languageCodes, languages } from "@/i18n/locales";
 
 const setMetaTag = (attribute: "name" | "property", key: string, content: string) => {
   let element = document.head.querySelector<HTMLMetaElement>(`meta[${attribute}="${key}"]`);
@@ -44,7 +44,7 @@ export const LocalizedSeo = () => {
   const siteName = t("seo.siteName");
 
   useEffect(() => {
-    const section = getCurrentSection(location.pathname);
+    const section = getSectionFromPath(location.pathname);
     const origin = window.location.origin;
     const canonicalUrl = new URL(buildLocalizedPath(language, section), origin).toString();
 

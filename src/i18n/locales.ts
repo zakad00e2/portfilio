@@ -85,5 +85,5 @@ export const getInitialLanguage = (): Language => {
   return getLanguageFromPath(window.location.pathname) ?? getStoredLanguage();
 };
 
-export const buildLocalizedPath = (language: Language, section: SectionSlug = defaultSection) =>
-  `/${language}/${section}`;
+export const buildLocalizedPath = (language: Language, section?: SectionSlug | null) =>
+  section ? `/${language}/${section}` : `/${language}`;
