@@ -1,4 +1,4 @@
-import { Github, Linkedin, Instagram } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -91,15 +91,6 @@ export const Hero = () => {
           aria-label="LinkedIn"
         >
           <Linkedin className="w-6 h-6" />
-        </a>
-        <a 
-          href="https://www.instagram.com/zakariasafi10/" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="text-slate hover:text-slate-light transition-colors duration-200"
-          aria-label="Instagram"
-        >
-          <Instagram className="w-6 h-6" />
         </a>
         <a
           href="https://x.com/Zakariaweb1"
