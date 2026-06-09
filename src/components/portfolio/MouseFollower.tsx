@@ -12,18 +12,32 @@ export const MouseFollower = () => {
     }
 
     const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const setX = gsap.quickTo(glow, "--mouse-x", {
-      duration: reduceMotionQuery.matches ? 0 : 0.45,
+
+    if (reduceMotionQuery.matches) {
+      return;
+    }
+
+    gsap.set(glow, { xPercent: -50, yPercent: -50, opacity: 0 });
+
+    const setX = gsap.quickTo(glow, "x", {
+      duration: 0.45,
       ease: "power3.out",
     });
-    const setY = gsap.quickTo(glow, "--mouse-y", {
-      duration: reduceMotionQuery.matches ? 0 : 0.45,
+    const setY = gsap.quickTo(glow, "y", {
+      duration: 0.45,
       ease: "power3.out",
     });
 
+    let isActive = false;
+
     const handleMouseMove = (e: MouseEvent) => {
-      setX(`${e.clientX}px`);
-      setY(`${e.clientY}px`);
+      if (!isActive) {
+        isActive = true;
+        gsap.set(glow, { x: e.clientX, y: e.clientY, opacity: 1 });
+      }
+
+      setX(e.clientX);
+      setY(e.clientY);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -34,13 +48,15 @@ export const MouseFollower = () => {
   }, []);
 
   return (
-    <div
-      ref={glowRef}
-      className="pointer-events-none fixed inset-0 z-30"
-      style={{
-        background:
-          "radial-gradient(600px at var(--mouse-x, 50vw) var(--mouse-y, 50vh), rgba(29, 78, 216, 0.15), transparent 80%)",
-      }}
-    />
+    <div className="pointer-events-none fixed inset-0 z-30 overflow-hidden">
+      <div
+        ref={glowRef}
+        className="absolute left-0 top-0 h-[1000px] w-[1000px] opacity-0"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(29, 78, 216, 0.15), transparent 75%)",
+        }}
+      />
+    </div>
   );
 };
