@@ -100,6 +100,14 @@ export const resources = {
             url: "https://archeng.vercel.app/",
           },
           {
+            image: "/vantage-tech.png",
+            title: "Vantage Tech",
+            description:
+              "An enterprise web platform for a tech company specialized in legal systems and digital solutions, featuring an interactive user experience and cinematic motion effects, built with the latest Next.js technologies.",
+            technologies: ["Next.js 16", "Tailwind CSS v4", "Framer Motion", "Lenis", "Next-intl"],
+            url: "https://techvantage-website.vercel.app/ar",
+          },
+          {
             image: "/Screenshot 2026-02-11 231128.png",
             title: "Maisam",
             description:
@@ -279,6 +287,14 @@ export const resources = {
               "موقع تفاعلي حديث لاستوديو متخصص في تجديد وتحسين المساحات السكنية. يعرض الخدمات، نماذج الأعمال السابقة، ومسار تواصل العملاء من خلال واجهة مصقولة تعكس الجودة والوظيفة والاهتمام بالتفاصيل البصرية.",
             technologies: ["React.js", "Vite", "Tailwind CSS", "TypeScript"],
             url: "https://archeng.vercel.app/",
+          },
+          {
+            image: "/vantage-tech.png",
+            title: "فانتج تك",
+            description:
+              "منصة ويب مؤسسية لشركة تقنية متخصصة في الأنظمة القانونية والحلول الرقمية، تتميز بتجربة مستخدم تفاعلية وتأثيرات حركية سينمائية، مبنية بأحدث تقنيات Next.js.",
+            technologies: ["Next.js 16", "Tailwind CSS v4", "Framer Motion", "Lenis", "Next-intl"],
+            url: "https://techvantage-website.vercel.app/ar",
           },
           {
             image: "/Screenshot 2026-02-11 231128.png",

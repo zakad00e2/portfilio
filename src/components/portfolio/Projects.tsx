@@ -73,7 +73,7 @@ export const Projects = () => {
                   <ul className="mt-2 flex flex-wrap" aria-label={t("common.technologiesUsed")}>
                     {project.technologies.map((tech) => (
                       <li key={tech} className="me-1.5 mt-2">
-                        <div className="flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium leading-5 text-primary">
+                        <div className="flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-normal leading-5 text-primary">
                           {tech}
                         </div>
                       </li>
