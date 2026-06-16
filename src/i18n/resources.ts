@@ -76,6 +76,14 @@ export const resources = {
         sectionTitle: "Projects",
         items: [
           {
+            image: "/pelmatech.png",
+            title: "Pelmatech",
+            description:
+              "A digital health platform that helps users manage a healthier lifestyle with tools for tracking fitness goals, monitoring nutrition, and organizing workouts in one place. The platform is designed to make health management more flexible, fast, and clear, supported by a team focused on improving the experience and providing reliable help when needed.",
+            technologies: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
+            url: "https://health-beta-lilac.vercel.app/",
+          },
+          {
             image: "/athr.png",
             title: "Athr",
             description:
@@ -264,6 +272,14 @@ export const resources = {
       projects: {
         sectionTitle: "المشاريع",
         items: [
+          {
+            image: "/pelmatech.png",
+            title: "Pelmatech",
+            description:
+              "منصة صحية رقمية تساعدك على إدارة نمط حياتك الصحي بسهولة، من خلال متابعة أهداف اللياقة، مراقبة التغذية، وتنظيم التمارين في مكان واحد. صُممت المنصة لتمنح المستخدم تجربة صحية أكثر مرونة، سرعة، ووضوحًا، مع فريق يعمل على تحسين التجربة وتقديم دعم موثوق عند الحاجة.",
+            technologies: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
+            url: "https://health-beta-lilac.vercel.app/",
+          },
           {
             image: "/athr.png",
             title: "أثر",
