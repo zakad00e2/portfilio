@@ -64,7 +64,7 @@ export const resources = {
             technologies: ["HTML", "CSS", "Bootstrap", "UI Debugging", "GitHub"],
           },
           {
-            period: "2022 - 2024",
+            period: "2022 - 2023",
             title: "Web Development Intern",
             description:
               "Assisted in maintaining front-end components and improving overall website speed for academic and small business projects, while supporting the debugging of JavaScript features and contributing to enhanced front-end performance and stability.",
@@ -261,7 +261,7 @@ export const resources = {
             technologies: ["HTML", "CSS", "Bootstrap", "UI Debugging", "GitHub"],
           },
           {
-            period: "2022 - 2024",
+            period: "2022 - 2023",
             title: "متدرب في تطوير الويب",
             description:
               "ساهمت في صيانة مكونات الواجهة وتحسين سرعة المواقع لمشاريع أكاديمية ومشاريع أعمال صغيرة، مع دعم إصلاح مشاكل JavaScript وتحسين أداء الواجهة الأمامية واستقرارها.",
