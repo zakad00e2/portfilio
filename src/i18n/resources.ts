@@ -76,6 +76,14 @@ export const resources = {
         sectionTitle: "Projects",
         items: [
           {
+            image: "/safi-cashier.png",
+            title: "Safi Cashier",
+            description:
+              "A cashier and sales management app tailored for small stores, with a fully Arabic RTL interface. It includes product, inventory, customer, invoice, and debt management, plus a fast point-of-sale screen with barcode support, multiple payment methods, and daily reports for tracking revenue and profit.",
+            technologies: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+            url: "https://safipos.vercel.app/",
+          },
+          {
             image: "/pelmatech.png",
             title: "Pelmatech",
             description:
@@ -272,6 +280,14 @@ export const resources = {
       projects: {
         sectionTitle: "المشاريع",
         items: [
+          {
+            image: "/safi-cashier.png",
+            title: "صافي كاشير",
+            description:
+              "تطبيق كاشير وإدارة مبيعات مخصص للمتاجر الصغيرة، بواجهة عربية كاملة تدعم اتجاه RTL. يوفّر إدارة المنتجات والمخزون والعملاء والفواتير والديون، مع شاشة بيع سريعة تدعم الباركود وطرق الدفع المختلفة، وتقارير يومية لمتابعة الإيرادات والأرباح.",
+            technologies: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+            url: "https://safipos.vercel.app/",
+          },
           {
             image: "/pelmatech.png",
             title: "Pelmatech",
