@@ -22,8 +22,9 @@ export const resources = {
       },
       hero: {
         name: "Zakaria Safi",
-        title: "Front End Engineer",
-        intro: "I build accessible, pixel-perfect digital experiences for the web.",
+        title: "Software Engineer",
+        intro:
+          "I help businesses and individuals turn their ideas into integrated web applications that enhance their digital presence and achieve their goals.",
       },
       about: {
         sectionTitle: "About",
@@ -75,6 +76,14 @@ export const resources = {
       projects: {
         sectionTitle: "Projects",
         items: [
+          {
+            image: "/besan-khalaily.png",
+            title: "Besan Khalaily",
+            description:
+              "A bilingual digital platform and brand website for fashion designer Besan Khalaily, bringing together her portfolio, services, workshop and consultation bookings. It includes a responsive Arabic/English experience, appointment booking, and a private dashboard to manage bookings, clients, available time slots, and request statuses, with an elegant visual identity, SEO, and full RTL support.",
+            technologies: ["TypeScript", "Tailwind CSS", "Radix UI", "Neon", "Recharts", "GSAP"],
+            url: "https://www.besankhalaily.com/",
+          },
           {
             image: "/safi-cashier.png",
             title: "Safi Cashier",
@@ -226,9 +235,9 @@ export const resources = {
         projects: "المشاريع",
       },
       hero: {
-        name: "زكريا صافي",
-        title: "مهندس واجهـــــات أماميـــــة",
-        intro: "أبني تجارب رقمية سهلة الوصول، دقيقة بصرياً، ومصممة بعناية للويب.",
+        name: "زكــــريا صافي",
+        title: "مهندس برمجيات",
+        intro: "أساعد الشركات والأفراد على تحويل أفكارهم إلى تطبيقات ويب متكاملــة تعــزز حضورهم الرقمي وتحقق أهدافهم.",
       },
       about: {
         sectionTitle: "نبذة عني",
@@ -280,6 +289,14 @@ export const resources = {
       projects: {
         sectionTitle: "المشاريع",
         items: [
+          {
+            image: "/besan-khalaily.png",
+            title: "بيسان خلايلي",
+            description:
+              "موقع وهوية رقمية لمصممة أزياء ، يجمع بين عرض الأعمال والخدمات وحجز ورش العمل والاستشارات. يتضمن واجهة عربية وإنجليزية متجاوبة، ونظام حجز للمواعيد، ولوحة تحكم خاصة لإدارة الحجوزات والعملاء والمواعيد المتاحة وحالات الطلبات، مع طابع بصري أنيق وتحسينات لمحركات البحث ودعم كامل لاتجاه الكتابة العربي.",
+            technologies: ["TypeScript", "Tailwind CSS", "Radix UI", "Neon", "Recharts", "GSAP", ],
+            url: "https://www.besankhalaily.com/",
+          },
           {
             image: "/safi-cashier.png",
             title: "صافي كاشير",

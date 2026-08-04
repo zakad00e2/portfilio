@@ -41,9 +41,15 @@ export const Hero = () => {
 
   return (
     <div ref={heroRef} className="flex min-h-screen flex-col justify-center lg:block lg:min-h-0">
-      <h1 
+      <h2
         data-gsap-hero
-        className="text-[clamp(2.5rem,8vw,3rem)] font-serif font-bold leading-[1.1] mb-3"
+        className="text-lg md:text-xl font-sans font-normal text-slate-light mb-2 tracking-tight"
+      >
+        {t("hero.title")}
+      </h2>
+      <h1
+        data-gsap-hero
+        className="text-[clamp(2.5rem,8vw,3rem)] font-serif font-bold leading-[1.1] mb-4"
         style={{
           fontFamily: isLatinHeroName ? "'Inter', system-ui, -apple-system, sans-serif" : undefined,
           fontFeatureSettings: "'ss01', 'cv11'",
@@ -58,13 +64,6 @@ export const Hero = () => {
           {heroName}
         </Link>
       </h1>
-      <h2 
-        data-gsap-hero
-        className="text-lg md:text-xl font-sans font-medium text-slate-light mb-4 tracking-tight"
-        style={{ fontFeatureSettings: "'ss01', 'cv11'" }}
-      >
-        {t("hero.title")}
-      </h2>
       <p 
         data-gsap-hero
         className="text-slate max-w-xs leading-relaxed"
