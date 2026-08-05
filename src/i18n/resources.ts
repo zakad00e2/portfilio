@@ -29,9 +29,9 @@ export const resources = {
       about: {
         sectionTitle: "About",
         paragraphs: [
-          "I am a passionate Front-End Developer who loves crafting accessible, pixel-perfect user interfaces that combine thoughtful design with solid engineering. I enjoy working at the intersection of design and development, where creativity meets precision, and I take pride in building digital experiences that are visually refined, intuitive, and optimized for performance and usability.",
-          "Currently, I work as a Freelance Front-End Developer, delivering custom web solutions for clients across different industries. I focus on creating high-quality, user-friendly interfaces that adhere to modern web standards, with a strong emphasis on accessibility to ensure an inclusive experience for all users. My work includes designing and developing polished UI components, optimizing performance, and integrating front-end applications with APIs to deliver complete, professional solutions.",
-          "Through my work, I have developed practical experience in turning ideas and requirements into clear, professional digital products, from understanding client needs and user experience to building responsive, well-structured, and scalable interfaces. I approach every project with a balance of visual detail, code quality, and final experience performance, aiming to deliver websites and applications that not only look good but also work efficiently and serve their purpose clearly.",
+          "I am a software engineer passionate about building end-to-end web applications that combine exceptional user experiences, robust back-end architecture, and reliable performance. I believe a successful digital product depends not only on its appearance, but also on the quality of its implementation, ease of use, and scalability. That is why I build balanced solutions that meet user needs and business goals at the same time.",
+          "I currently work as a freelance software developer, helping businesses and individuals turn their ideas into complete web applications. My work spans requirements analysis and system architecture, front-end and back-end development, and launching production-ready products built to grow. I focus on modern, fast, and secure solutions grounded in best practices and contemporary web technologies.",
+          "Throughout my career, I have gained hands-on experience developing complete digital products, from understanding client needs and defining the right solution to delivering it with clean, maintainable code. I approach every project with an engineering mindset focused on detail, software quality, performance, and scalability—delivering applications that not only look professional, but also create real value and help clients achieve their goals with confidence.",
         ],
       },
       experience: {
@@ -242,9 +242,9 @@ export const resources = {
       about: {
         sectionTitle: "نبذة عني",
         paragraphs: [
-          "أنا مطور واجهات أمامية شغوف ببناء واجهات مستخدم سهلة الوصول ودقيقة في تفاصيلها، تجمع بين التصميم المدروس والهندسة المتينة. أعمل في المساحة التي يلتقي فيها التصميم بالتطوير، حيث تتحول الأفكار الإبداعية إلى تجارب واضحة، أنيقة، وسريعة الاستخدام.",
-          "أعمل حالياً كمطور واجهات أمامية مستقل، وأقدم حلول ويب مخصصة لعملاء من قطاعات مختلفة. أركز على بناء واجهات عالية الجودة وسهلة الاستخدام ومتوافقة مع معايير الويب الحديثة، مع اهتمام خاص بإمكانية الوصول حتى تكون التجربة شاملة ومريحة لجميع المستخدمين.",
-          "خلال عملي، طورت خبرة عملية في تحويل الأفكار والمتطلبات إلى منتجات رقمية واضحة واحترافية، من فهم احتياج العميل وتجربة المستخدم، إلى بناء واجهات متجاوبة، منظمة، وقابلة للتطوير. أتعامل مع كل مشروع بعين تجمع بين التفاصيل البصرية، جودة الكود، وأداء التجربة النهائية، بهدف تقديم مواقع وتطبيقات لا تبدو جيدة فقط، بل تعمل بكفاءة وتخدم الهدف منها بوضوح.",
+          "أنا مهندس برمجيات شغوف ببناء تطبيقات ويب متكاملة تجمع بين تجربة مستخدم مميزة، وبنية خلفية قوية، وأداء موثوق. أؤمن أن نجاح أي منتج رقمي لا يعتمد على المظهر فقط، بل على جودة التنفيذ، وسهولة الاستخدام، وقابلية التوسع، لذلك أحرص على تطوير حلول متوازنة تلبي احتياجات المستخدمين وأهداف الأعمال في الوقت نفسه.",
+          "أعمل حالياً كمطور برمجيات مستقل، وأساعد الشركات والأفراد على تحويل أفكارهم إلى تطبيقات ويب متكاملة، بدءاً من تحليل المتطلبات وتصميم هيكل النظام، مروراً بتطوير الواجهات الأمامية والخدمات الخلفية، ووصولاً إلى إطلاق منتجات جاهزة للاستخدام وقابلة للنمو. أركز على بناء حلول حديثة، سريعة، وآمنة، تعتمد على أفضل الممارسات وتقنيات الويب المعاصرة.",
+          "خلال مسيرتي، اكتسبت خبرة عملية في تطوير منتجات رقمية متكاملة، بدءاً من فهم احتياجات العميل وصياغة الحلول المناسبة، وصولاً إلى تنفيذها بكود منظم وقابل للصيانة. أتعامل مع كل مشروع بعقلية هندسية تهتم بالتفاصيل، وجودة البرمجيات، والأداء، وقابلية التوسع، بهدف تقديم تطبيقات لا تبدو احترافية فحسب، بل توفر قيمة حقيقية وتساعد العملاء على تحقيق أهدافهم بثقة.",
         ],
       },
       experience: {
