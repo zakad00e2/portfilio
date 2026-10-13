@@ -105,8 +105,17 @@ All colors MUST be HSL.
     letter-spacing: 0;
   }
 
-  html {
-    scroll-behavior: smooth;
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
   }
 
   ::selection {

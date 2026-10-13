@@ -3,24 +3,23 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { buildLocalizedPath, type SectionSlug } from "@/i18n/locales";
 import { useLocale } from "@/hooks/use-locale";
+import { useSmoothScroll } from "@/components/SmoothScroll";
 
 const navItems: SectionSlug[] = ["about", "experience", "projects"];
 
-const scrollToSection = (id: SectionSlug) => {
+const scrollToSection = (id: SectionSlug, lenis: ReturnType<typeof useSmoothScroll>) => {
   const element = document.getElementById(id);
 
   if (!element) {
     return;
   }
 
-  const offset = 80;
-  const elementPosition = element.getBoundingClientRect().top;
-  const offsetPosition = elementPosition + window.pageYOffset - offset;
+  if (lenis) {
+    lenis.scrollTo(element, { offset: -80 });
+    return;
+  }
 
-  window.scrollTo({
-    top: offsetPosition,
-    behavior: "smooth",
-  });
+  window.scrollTo({ top: element.getBoundingClientRect().top + window.scrollY - 80 });
 };
 
 export const Navigation = () => {
@@ -29,6 +28,7 @@ export const Navigation = () => {
   const location = useLocation();
   const { t } = useTranslation();
   const { language } = useLocale();
+  const lenis = useSmoothScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +57,7 @@ export const Navigation = () => {
     const path = buildLocalizedPath(language, id);
 
     if (location.pathname === path) {
-      scrollToSection(id);
+      scrollToSection(id, lenis);
       return;
     }
 

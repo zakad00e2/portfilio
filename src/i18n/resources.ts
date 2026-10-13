@@ -77,6 +77,14 @@ export const resources = {
         sectionTitle: "Projects",
         items: [
           {
+            image: "/unsporty.png",
+            title: "UNSPORTY",
+            description:
+              "End-to-end development of a Zid e-commerce storefront for UNSPORTY, including the interface and user experience, product and category pages, navigation, cart, wishlist, responsive mobile design, and a contemporary visual identity.",
+            technologies: ["Zid", "E-commerce", "Responsive Design", "UX/UI"],
+            url: "https://unsporty.com/",
+          },
+          {
             image: "/besan-khalaily.png",
             title: "Besan Khalaily",
             description:
@@ -289,6 +297,14 @@ export const resources = {
       projects: {
         sectionTitle: "المشاريع",
         items: [
+          {
+            image: "/unsporty.png",
+            title: "UNSPORTY",
+            description:
+              "تطوير متجر إلكتروني متكامل من الصفر على منصة زد لعلامة UNSPORTY، شمل بناء الواجهة وتجربة المستخدم، صفحات المنتجات والتصنيفات، التنقل، السلة والمفضلة، مع تصميم متجاوب للجوال وهوية بصرية عصرية.",
+            technologies: ["Zid", "E-commerce", "Responsive Design", "UX/UI"],
+            url: "https://unsporty.com/",
+          },
           {
             image: "/besan-khalaily.png",
             title: "بيسان خلايلي",

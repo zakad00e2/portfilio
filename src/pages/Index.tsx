@@ -11,11 +11,13 @@ import { LanguageSwitcher } from "@/components/portfolio/LanguageSwitcher";
 import { LocalizedSeo } from "@/components/portfolio/LocalizedSeo";
 import { useGsapReveal } from "@/hooks/use-gsap-reveal";
 import { isLanguage, isSectionSlug, setStoredLanguage } from "@/i18n/locales";
+import { useSmoothScroll } from "@/components/SmoothScroll";
 
 const Index = () => {
   const { i18n, t } = useTranslation();
   const { lang, section } = useParams();
   const location = useLocation();
+  const lenis = useSmoothScroll();
   useGsapReveal();
 
   useEffect(() => {
@@ -42,18 +44,16 @@ const Index = () => {
         return;
       }
 
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      if (lenis) {
+        lenis.scrollTo(element, { offset: -80 });
+        return;
+      }
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+      window.scrollTo({ top: element.getBoundingClientRect().top + window.scrollY - 80 });
     }, 80);
 
     return () => window.clearTimeout(timeoutId);
-  }, [location.pathname, section]);
+  }, [lenis, location.pathname, section]);
 
   return (
     <div className="min-h-screen bg-background relative">
