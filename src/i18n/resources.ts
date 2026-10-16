@@ -181,30 +181,6 @@ export const resources = {
             url: "https://artist-lens-hub-kqu1.vercel.app/",
           },
           {
-            image: "/Screenshot 2025-12-01 122458.png",
-            title: "Vertex AI",
-            description:
-              "Vertex AI is a modern website designed for a digital agency specializing in artificial intelligence solutions and web development. It delivers a fast, contemporary user experience with elegant interfaces and smooth animations that reflect the agency's technological identity.",
-            technologies: ["React", "Tailwind CSS", "TypeScript", "shadcn/ui", "Framer Motion", "TanStack Query"],
-            url: "https://vertex-ai-peach.vercel.app/",
-          },
-          {
-            image: "/1.png",
-            title: "Digital Library",
-            description:
-              "A modern digital publishing platform built with React and TypeScript. It combines a social blog feed, knowledge wiki, and digital bookstore within a sleek, high-performance interface. The platform features a fully responsive Tailwind-powered design, multi-language support (i18n), and a content-focused user experience.",
-            technologies: ["React", "Tailwind CSS", "TypeScript", "i18n"],
-            url: "https://pure-scribe-muse2.vercel.app/",
-          },
-          {
-            image: "/2.png",
-            title: "Dashboard",
-            description:
-              "An administrative dashboard designed for data visualization, management, and monitoring of key performance indicators (KPIs). It features charts, tables, and user management tools.",
-            technologies: ["React", "Material UI", "Chart.js"],
-            url: "https://dashboard-swart-two-88.vercel.app/",
-          },
-          {
             image: "/3.png",
             title: "Tshtri",
             description:
@@ -400,30 +376,6 @@ export const resources = {
               "معرض أعمال لفنان بصري معاصر، صمم لعرض الأعمال التجريدية ضمن تجربة أنيقة مستوحاة من صالات العرض. بُني باستخدام React وVite وTailwind CSS، ويضم قسماً افتتاحياً جذاباً، تجربة معرض منتقاة، ومنطقة تواصل للاستفسارات وطلبات الأعمال الفنية، مع أداء سلس وتجربة غامرة.",
             technologies: ["React", "API", "Tailwind CSS"],
             url: "https://artist-lens-hub-kqu1.vercel.app/",
-          },
-          {
-            image: "/Screenshot 2025-12-01 122458.png",
-            title: "Vertex AI",
-            description:
-              "موقع حديث لوكالة رقمية متخصصة في حلول الذكاء الاصطناعي وتطوير الويب. يقدم تجربة سريعة ومعاصرة بواجهات أنيقة وحركات سلسة تعكس الهوية التقنية للوكالة.",
-            technologies: ["React", "Tailwind CSS", "TypeScript", "shadcn/ui", "Framer Motion", "TanStack Query"],
-            url: "https://vertex-ai-peach.vercel.app/",
-          },
-          {
-            image: "/1.png",
-            title: "المكتبة الرقمية",
-            description:
-              "منصة نشر رقمية حديثة مبنية بـ React وTypeScript، تجمع بين موجز اجتماعي للمدونات، موسوعة معرفية، ومتجر كتب رقمي داخل واجهة سريعة وأنيقة. تتميز بتصميم متجاوب بالكامل باستخدام Tailwind، دعم تعدد اللغات، وتجربة موجهة للمحتوى.",
-            technologies: ["React", "Tailwind CSS", "TypeScript", "i18n"],
-            url: "https://pure-scribe-muse2.vercel.app/",
-          },
-          {
-            image: "/2.png",
-            title: "لوحة تحكم",
-            description:
-              "لوحة إدارة مخصصة لعرض البيانات وإدارتها ومراقبة مؤشرات الأداء الرئيسية. تضم عادةً مخططات، جداول، وأدوات لإدارة المستخدمين ضمن تجربة عملية ومنظمة.",
-            technologies: ["React", "Material UI", "Chart.js"],
-            url: "https://dashboard-swart-two-88.vercel.app/",
           },
           {
             image: "/3.png",
