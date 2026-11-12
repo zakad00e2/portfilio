@@ -77,6 +77,14 @@ export const resources = {
         sectionTitle: "Projects",
         items: [
           {
+            image: "/jaha.png",
+            title: "JAHA",
+            description:
+              "Design and development of an e-commerce storefront for JAHA, a resortwear and swimwear brand, with a visual identity inspired by coastal living and fashion elegance. The store offers a responsive Arabic and English browsing experience, with visually engaging pages showcasing its collections and brand story.",
+            technologies: ["HTML", "CSS", "JavaScript", "Zid", "E-commerce", "Responsive Design", "UX/UI"],
+            url: "https://jaha.sa/",
+          },
+          {
             image: "/unsporty.png",
             title: "UNSPORTY",
             description:
@@ -273,6 +281,14 @@ export const resources = {
       projects: {
         sectionTitle: "المشاريع",
         items: [
+          {
+            image: "/jaha.png",
+            title: "JAHA",
+            description:
+              "تصميم وتطوير واجهة متجر إلكتروني لعلامة JAHA المتخصصة في أزياء المنتجعات وملابس السباحة، بهوية بصرية مستوحاة من الروح الساحلية وأناقة الأزياء. يقدّم المتجر تجربة تصفح باللغتين العربية والإنجليزية، مع تصميم متجاوب يناسب مختلف الأجهزة، وصفحات تعرض المجموعات وقصة العلامة بطريقة بصرية جذابة.",
+            technologies: ["HTML", "CSS", "JavaScript", "Zid", "E-commerce", "Responsive Design", "UX/UI"],
+            url: "https://jaha.sa/",
+          },
           {
             image: "/unsporty.png",
             title: "UNSPORTY",
