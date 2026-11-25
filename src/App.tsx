@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Analytics } from "@vercel/analytics/react";
 import { useEffect } from "react";
 import { Link, Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
 import { buildLocalizedPath, getStoredLanguage, isLanguage, isLegacySection } from "@/i18n/locales";
@@ -61,6 +62,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <Analytics />
       <SmoothScroll>
         <Routes>
           <Route path="/" element={<RootRedirect />} />
