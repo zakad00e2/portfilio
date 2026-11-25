@@ -2,6 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
+/* A brief, non-blocking introduction inspired by a branded splash screen. */
+.site-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+  background: hsl(0 0% 100%);
+  color: hsl(0 0% 0%);
+  text-align: center;
+  pointer-events: none;
+  animation: site-intro-exit 3.6s ease-in-out both;
+}
+
+.portfolio-name-type {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-feature-settings: 'ss01', 'cv11';
+  font-size: clamp(2.5rem, 8vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.portfolio-name-type:lang(ar) {
+  font-family: 'Thmanyah Sans', system-ui, sans-serif;
+}
+
+.site-intro__name {
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  padding: 0.25em;
+  mask-image: linear-gradient(to right, transparent 45%, hsl(0 0% 0%) 55%);
+  mask-size: 225% 100%;
+  mask-repeat: no-repeat;
+  animation: site-intro-name-reveal 2.4s ease-in-out both;
+}
+
+@keyframes site-intro-name-reveal {
+  from {
+    opacity: 0;
+    filter: blur(12px);
+    mask-position: left;
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    mask-position: right;
+  }
+}
+
+@keyframes site-intro-exit {
+  0%, 75% { opacity: 1; visibility: visible; }
+  99% { opacity: 0; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-intro { display: none; }
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
@@ -181,6 +241,11 @@ All colors MUST be HSL.
     -webkit-text-fill-color: transparent;
   }
 
+  .hero-name-gradient:lang(ar) {
+    /* Extend the background behind the final yeh dots below the text box. */
+    padding-block-end: 0.25em;
+  }
+
   .language-switcher-position {
     width: max-content;
     left: 1rem;
@@ -268,7 +333,7 @@ All colors MUST be HSL.
   }
 
   html[lang="ar"] .nav-link-text {
-    @apply text-xl font-sans font-medium capitalize;
+    @apply text-base font-sans font-medium capitalize;
     font-family: var(--font-sans);
     font-feature-settings: 'ss01', 'cv11';
     letter-spacing: normal;

@@ -16,7 +16,7 @@ export const MobileNavigation = () => {
           <button
             type="button"
             aria-label={t("navigation.menu")}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-light/10 bg-navy-light text-slate-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="flex h-11 w-11 items-center justify-center rounded-full text-slate-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
             <Menu aria-hidden="true" className="h-5 w-5" />
           </button>

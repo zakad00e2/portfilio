@@ -42,7 +42,7 @@ export const Projects = () => {
 
   return (
     <section id="projects" className="mb-16 scroll-mt-16 lg:mb-36">
-      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+      <div className="pointer-events-none sticky top-0 z-50 -mx-6 mb-4 w-screen px-6 py-5 md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
         <h2 className="section-heading">
           {t("projects.sectionTitle")}
         </h2>
@@ -124,7 +124,7 @@ export const Projects = () => {
           <button
             type="button"
             onClick={() => setShowAll(true)}
-            className="group mx-auto flex min-h-11 items-center gap-2 font-medium text-slate-light transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+            className="group mx-auto flex min-h-11 items-center gap-2 font-medium text-slate transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
           >
             {t("projects.showMore")}
             <ArrowDown aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-y-1 motion-reduce:transition-none motion-reduce:group-hover:translate-y-0" />

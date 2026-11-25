@@ -25,7 +25,7 @@ export const Experience = () => {
 
   return (
     <section id="experience" className="mb-16 scroll-mt-16 lg:mb-36">
-      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+      <div className="pointer-events-none sticky top-0 z-50 -mx-6 mb-4 w-screen px-6 py-5 md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
         <h2 className="section-heading">
           {t("experience.sectionTitle")}
         </h2>
