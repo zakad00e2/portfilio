@@ -28,6 +28,6 @@ export const renderPage = (language: Language, pathname = buildLocalizedPath(lan
     ),
     headHtml: pathname === buildLocalizedPath(language) || blogPage
       ? [renderSeoHead(language, blogPage), language === "ar" ? arabicFontPreloads : ""].join("\n")
-      : renderNoIndexHead(pathname === "/" ? "Zakaria Safi Portfolio" : "Page not found | Zakaria Safi"),
+      : renderNoIndexHead(pathname === "/" ? "معرض أعمال زكريا صافي" : "الصفحة غير موجودة | زكريا صافي"),
   };
 };

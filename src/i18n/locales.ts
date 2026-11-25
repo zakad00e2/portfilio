@@ -19,8 +19,8 @@ export const languages = {
 
 export type Language = keyof typeof languages;
 
-export const defaultLanguage: Language = "en";
-export const languageCodes = Object.keys(languages) as Language[];
+export const defaultLanguage: Language = "ar";
+export const languageCodes: Language[] = ["ar"];
 
 export const sections = ["about", "services", "experience", "projects"] as const;
 export type SectionSlug = (typeof sections)[number];
@@ -56,16 +56,7 @@ export const getCurrentSection = (pathname: string): SectionSlug =>
   getSectionFromPath(pathname) ?? defaultSection;
 
 export const getStoredLanguage = (): Language => {
-  if (typeof window === "undefined") {
-    return defaultLanguage;
-  }
-
-  try {
-    const storedLanguage = window.localStorage.getItem(languageStorageKey) ?? undefined;
-    return isLanguage(storedLanguage) ? storedLanguage : defaultLanguage;
-  } catch {
-    return defaultLanguage;
-  }
+  return defaultLanguage;
 };
 
 export const setStoredLanguage = (language: Language) => {
@@ -85,7 +76,7 @@ export const getInitialLanguage = (): Language => {
     return defaultLanguage;
   }
 
-  return getLanguageFromPath(window.location.pathname) ?? getStoredLanguage();
+  return defaultLanguage;
 };
 
 export const buildLocalizedPath = (language: Language, section?: SectionSlug | null) =>

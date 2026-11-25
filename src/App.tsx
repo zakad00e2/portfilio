@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Analytics } from "@vercel/analytics/react";
 import { useEffect } from "react";
-import { Link, Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
 import { buildLocalizedPath, getStoredLanguage, isLanguage, isLegacySection } from "@/i18n/locales";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { getBlogPage } from "@/blog/posts";
@@ -30,19 +30,20 @@ const RootRedirect = () => {
 
   return (
     <main className="mx-auto max-w-md px-6 py-16">
-      <h1 className="mb-4 text-2xl font-bold text-slate-light">Zakaria Safi</h1>
-      <nav className="flex gap-4" aria-label="Portfolio language">
-        <Link className="text-primary underline" to="/en" lang="en">English</Link>
-        <Link className="text-primary underline" to="/ar" lang="ar" dir="rtl">العربية</Link>
-      </nav>
+      <h1 className="mb-4 text-2xl font-bold text-slate-light">زكريا صافي</h1>
+      <a className="text-primary underline" href="/ar">زيارة الموقع</a>
     </main>
   );
 };
 
 const LocalizedRoute = () => {
   const { lang, section } = useParams();
-  const { pathname } = useLocation();
+  const { pathname, search, hash } = useLocation();
   const legacySection = section && isLegacySection(section) ? section : undefined;
+
+  if (lang === "en") {
+    return <Navigate to={{ pathname: buildLocalizedPath("ar", legacySection), search, hash }} replace />;
+  }
 
   if (!isLanguage(lang) || (section && !legacySection) || pathname !== buildLocalizedPath(lang, legacySection)) {
     return <NotFound />;
@@ -52,7 +53,10 @@ const LocalizedRoute = () => {
 };
 
 const BlogRoute = () => {
-  const { pathname } = useLocation();
+  const { pathname, search, hash } = useLocation();
+  if (pathname.startsWith("/en/")) {
+    return <Navigate to={{ pathname: pathname.replace(/^\/en/, "/ar"), search, hash }} replace />;
+  }
   const page = getBlogPage(pathname);
   return page ? <Blog page={page} /> : <NotFound />;
 };

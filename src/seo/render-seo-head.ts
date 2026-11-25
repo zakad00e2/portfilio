@@ -30,7 +30,7 @@ export const renderSeoHead = (language: Language, blogPage?: BlogPage) => {
     "twitter:title": title,
     "twitter:description": description,
   };
-  const { "og:locale:alternate": portfolioAlternate, ...openGraph } = portfolio.openGraph;
+  const openGraph = portfolio.openGraph;
   const alternateLanguage = alternates.find(([code]) => code !== language && code !== "x-default")?.[0];
   const pageOpenGraph = {
     ...openGraph,
@@ -38,9 +38,7 @@ export const renderSeoHead = (language: Language, blogPage?: BlogPage) => {
     "og:description": description,
     "og:type": post ? "article" : openGraph["og:type"],
     "og:url": canonical,
-    ...(blogPage
-      ? alternateLanguage && { "og:locale:alternate": languages[alternateLanguage].locale }
-      : { "og:locale:alternate": portfolioAlternate }),
+    ...(alternateLanguage && { "og:locale:alternate": languages[alternateLanguage].locale }),
     ...(post && { "article:published_time": post.date }),
   };
   const structuredData = blogPage ? buildBlogStructuredData(blogPage) : buildStructuredData(language);

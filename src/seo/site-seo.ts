@@ -18,7 +18,6 @@ export const alternateUrls = [
 
 export const buildSeoDocument = (language: Language) => {
   const { seo } = resources[language].translation;
-  const alternateLanguage = language === "ar" ? "en" : "ar";
   const canonical = getCanonicalUrl(language);
 
   return {
@@ -39,7 +38,6 @@ export const buildSeoDocument = (language: Language) => {
       "og:description": seo.description,
       "og:type": "website",
       "og:locale": languages[language].locale,
-      "og:locale:alternate": languages[alternateLanguage].locale,
       "og:site_name": seo.siteName,
       "og:url": canonical,
       "og:image": portfolioImage,

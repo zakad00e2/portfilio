@@ -28,11 +28,11 @@ for (const language of languageCodes) {
   await writePage(language, blogPath.slice(1), blogPath);
 }
 
-for (const { language, slug } of blogPosts) {
+for (const { language, slug } of blogPosts.filter((post) => post.language === "ar")) {
   const postPath = getBlogPath(language, slug);
   await writePage(language, postPath.slice(1), postPath);
 }
 
-await writePage("en", "index", "/");
-await writePage("en", "404", "/404.html");
+await writePage("ar", "index", "/");
+await writePage("ar", "404", "/404.html");
 await writeFile(new URL("sitemap.xml", output), renderSitemap());

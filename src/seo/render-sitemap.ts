@@ -19,7 +19,7 @@ export const renderSitemap = () => {
     const latest = getBlogPosts(language)[0];
     return latest ? entry(getBlogCanonicalUrl(language), latest.date, getBlogAlternates({ language })) : [];
   });
-  const articles = blogPosts.flatMap((post) => entry(
+  const articles = blogPosts.filter((post) => post.language === "ar").flatMap((post) => entry(
     getBlogCanonicalUrl(post.language, post.slug), post.date, getBlogAlternates({ language: post.language, post }),
   ));
 

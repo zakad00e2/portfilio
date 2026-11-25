@@ -11,6 +11,14 @@ export const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const heroName = t("hero.name");
   const isLatinHeroName = /^[\p{Script=Latin}\s]+$/u.test(heroName);
+  const titleBadge = (
+    <>
+      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-3 w-3 shrink-0 fill-[#e88a3d]">
+        <path d="m12 0 2.1 4.5 4.1-2.8-.5 5 5-.5-2.8 4.1L24 12l-4.1 1.7 2.8 4.1-5-.5.5 5-4.1-2.8L12 24l-2.1-4.5-4.1 2.8.5-5-5 .5 2.8-4.1L0 12l4.1-1.7-2.8-4.1 5 .5-.5-5 4.1 2.8L12 0Z" />
+      </svg>
+      {t("hero.title")}
+    </>
+  );
 
   useEffect(() => {
     const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -41,16 +49,13 @@ export const Hero = () => {
   return (
     <div ref={heroRef} className="flex min-h-screen flex-col justify-center lg:block lg:min-h-0">
 
-      <div className="flex items-start gap-4 rtl:flex-row-reverse">
+      <div className="flex flex-col-reverse items-start gap-4 lg:flex-row lg:rtl:flex-row-reverse">
         <div className="min-w-0">
           <p
             data-gsap-hero
-            className="mb-3 inline-flex w-fit items-center gap-1 rounded-full border border-black/10 bg-white px-2.5 py-1 font-sans text-[10px] font-normal text-slate-light"
+            className="mb-3 hidden w-fit items-center gap-1 rounded-full border border-black/10 bg-white px-2.5 py-1 font-sans text-[10px] font-normal text-slate-light lg:inline-flex"
           >
-            <svg aria-hidden="true" viewBox="0 0 24 24" className="h-3 w-3 shrink-0 fill-[#e88a3d]">
-              <path d="m12 0 2.1 4.5 4.1-2.8-.5 5 5-.5-2.8 4.1L24 12l-4.1 1.7 2.8 4.1-5-.5.5 5-4.1-2.8L12 24l-2.1-4.5-4.1 2.8.5-5-5 .5 2.8-4.1L0 12l4.1-1.7-2.8-4.1 5 .5-.5-5 4.1 2.8L12 0Z" />
-            </svg>
-            {t("hero.title")}
+            {titleBadge}
           </p>
           <h1
             data-gsap-hero
@@ -116,14 +121,18 @@ export const Hero = () => {
           </div>
           <Navigation />
         </div>
-        <img
-          data-gsap-hero
-          src="/images/zakaria-safi-color.png"
-          alt={heroName}
-          width="144"
-          height="144"
-          className="h-36 w-36 shrink-0 rounded-xl object-cover object-top"
-        />
+        <div data-gsap-hero className="relative shrink-0">
+          <img
+            src="/images/zakaria-safi-color.png"
+            alt={heroName}
+            width="144"
+            height="144"
+            className="h-36 w-36 rounded-xl object-cover object-top"
+          />
+          <p className="absolute bottom-1 right-1 flex w-max items-center gap-1 rounded-xl border border-white/50 bg-white/55 px-2 py-0.5 font-sans text-[9px] font-normal text-slate-light backdrop-blur-xl [&_svg]:h-2.5 [&_svg]:w-2.5 lg:hidden">
+            {titleBadge}
+          </p>
+        </div>
       </div>
 
     </div>

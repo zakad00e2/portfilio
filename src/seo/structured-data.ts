@@ -30,7 +30,7 @@ export const buildStructuredData = (language: Language) => {
         "@id": websiteId,
         url: `${siteOrigin}/`,
         name: seo.siteName,
-        inLanguage: ["en", "ar"],
+        inLanguage: "ar",
       },
       {
         "@type": "Person",
