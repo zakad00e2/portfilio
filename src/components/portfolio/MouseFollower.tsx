@@ -54,7 +54,7 @@ export const MouseFollower = () => {
         className="absolute left-0 top-0 h-[1000px] w-[1000px] opacity-0"
         style={{
           background:
-            "radial-gradient(circle, rgba(29, 78, 216, 0.15), transparent 75%)",
+            "radial-gradient(circle, rgba(0, 0, 0, 0.035), transparent 75%)",
         }}
       />
     </div>

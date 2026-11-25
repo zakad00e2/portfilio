@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useLocale } from "@/hooks/use-locale";
@@ -9,6 +10,9 @@ export const LanguageSwitcher = () => {
   const { t } = useTranslation();
   const { language } = useLocale();
   const section = getSectionFromPath(location.pathname);
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => setHydrated(true), []);
 
   return (
     <div
@@ -23,7 +27,11 @@ export const LanguageSwitcher = () => {
         return (
           <Link
             key={code}
-            to={buildLocalizedPath(code, section)}
+            to={{
+              pathname: buildLocalizedPath(code),
+              search: hydrated ? location.search : "",
+              hash: hydrated ? location.hash || (section ? `#${section}` : "") : "",
+            }}
             lang={code}
             dir={languages[code].dir}
             aria-current={isActive ? "page" : undefined}

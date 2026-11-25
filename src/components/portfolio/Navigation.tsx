@@ -1,51 +1,27 @@
 import { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { buildLocalizedPath, type SectionSlug } from "@/i18n/locales";
-import { useLocale } from "@/hooks/use-locale";
-import { useSmoothScroll } from "@/components/SmoothScroll";
-
-const navItems: SectionSlug[] = ["about", "experience", "projects"];
-
-const scrollToSection = (id: SectionSlug, lenis: ReturnType<typeof useSmoothScroll>) => {
-  const element = document.getElementById(id);
-
-  if (!element) {
-    return;
-  }
-
-  if (lenis) {
-    lenis.scrollTo(element, { offset: -80 });
-    return;
-  }
-
-  window.scrollTo({ top: element.getBoundingClientRect().top + window.scrollY - 80 });
-};
+import { sections, type SectionSlug } from "@/i18n/locales";
 
 export const Navigation = () => {
-  const [activeSection, setActiveSection] = useState<SectionSlug>("about");
-  const navigate = useNavigate();
-  const location = useLocation();
+  const [activeSection, setActiveSection] = useState<SectionSlug | "blog">("about");
   const { t } = useTranslation();
-  const { language } = useLocale();
-  const lenis = useSmoothScroll();
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navItems.map((item) => document.getElementById(item));
-      const scrollPosition = window.scrollY + window.innerHeight / 3;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section) {
-          const sectionTop = section.offsetTop;
-          
-          if (scrollPosition >= sectionTop) {
-            setActiveSection(navItems[i]);
-            break;
-          }
-        }
+      const blog = document.getElementById("blog");
+      const atPageEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+      if (atPageEnd && blog && blog.getBoundingClientRect().top < window.innerHeight) {
+        setActiveSection("blog");
+        return;
       }
+
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
+      const active = [...sections, "blog" as const].reverse().find((item) => {
+        const element = document.getElementById(item);
+        return element && element.getBoundingClientRect().top + window.scrollY <= scrollPosition;
+      });
+      setActiveSection(active ?? "about");
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -53,45 +29,33 @@ export const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navigateToSection = (id: SectionSlug) => {
-    const path = buildLocalizedPath(language, id);
-
-    if (location.pathname === path) {
-      scrollToSection(id, lenis);
-      return;
-    }
-
-    navigate(path);
-  };
-
   return (
-    <nav className="hidden lg:block mt-16" aria-label={t("navigation.ariaLabel")}>
-      <ul className="space-y-6">
-        {navItems.map((item) => (
+    <nav className="hidden lg:mt-16 lg:block" aria-label={t("navigation.ariaLabel")}>
+      <ul className="flex flex-wrap gap-x-5 gap-y-3 lg:block lg:space-y-6">
+        {[...sections, "blog" as const].map((item) => (
           <li key={item}>
-            <button
-              type="button"
-              onClick={() => navigateToSection(item)}
+            <Link
+              to={`#${item}`}
               aria-current={activeSection === item ? "location" : undefined}
               className="group flex items-center gap-4 transition-all duration-200"
             >
               <span
-                className={`h-px transition-all duration-200 ${
+                className={`hidden h-px transition-all duration-200 lg:block ${
                   activeSection === item
-                    ? "w-16 bg-slate-light"
-                    : "w-8 bg-slate group-hover:w-16 group-hover:bg-slate-light"
+                    ? "w-16 bg-black"
+                    : "w-8 bg-neutral-500 group-hover:w-16 group-hover:bg-neutral-600"
                 }`}
               />
               <span
                 className={`nav-link-text ${
                   activeSection === item
-                    ? "text-slate-light"
-                    : "text-slate group-hover:text-slate-light"
+                    ? "text-black"
+                    : "text-neutral-500 group-hover:text-neutral-600"
                 }`}
               >
                 {t(`navigation.${item}`)}
               </span>
-            </button>
+            </Link>
           </li>
         ))}
       </ul>

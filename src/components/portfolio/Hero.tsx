@@ -3,12 +3,10 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import gsap from "gsap";
-import { useLocale } from "@/hooks/use-locale";
-import { buildLocalizedPath } from "@/i18n/locales";
+import { personProfiles } from "@/seo/site-seo";
 
 export const Hero = () => {
   const { t } = useTranslation();
-  const { language } = useLocale();
   const heroRef = useRef<HTMLDivElement>(null);
   const heroName = t("hero.name");
   const isLatinHeroName = /^[\p{Script=Latin}\s]+$/u.test(heroName);
@@ -41,23 +39,28 @@ export const Hero = () => {
 
   return (
     <div ref={heroRef} className="flex min-h-screen flex-col justify-center lg:block lg:min-h-0">
-      <h2
+      <p
         data-gsap-hero
-        className="text-lg md:text-xl font-sans font-normal text-slate-light mb-2 tracking-tight"
+        className="mb-3 inline-flex w-fit items-center gap-1.5 rounded-full border border-black/10 bg-white px-3 py-1.5 font-sans text-xs font-normal text-slate-light"
       >
+        <svg aria-hidden="true" viewBox="0 0 24 24" className="h-3.5 w-3.5 shrink-0 fill-[#e88a3d]">
+          <path d="m12 0 2.1 4.5 4.1-2.8-.5 5 5-.5-2.8 4.1L24 12l-4.1 1.7 2.8 4.1-5-.5.5 5-4.1-2.8L12 24l-2.1-4.5-4.1 2.8.5-5-5 .5 2.8-4.1L0 12l4.1-1.7-2.8-4.1 5 .5-.5-5 4.1 2.8L12 0Z" />
+        </svg>
         {t("hero.title")}
-      </h2>
+      </p>
       <h1
         data-gsap-hero
         className="text-[clamp(2.5rem,8vw,3rem)] font-serif font-bold leading-[1.1] mb-4"
         style={{
-          fontFamily: isLatinHeroName ? "'Inter', system-ui, -apple-system, sans-serif" : undefined,
+          fontFamily: isLatinHeroName
+            ? "'Inter', system-ui, -apple-system, sans-serif"
+            : "'Thmanyah Sans', system-ui, sans-serif",
           fontFeatureSettings: "'ss01', 'cv11'",
         }}
       >
         <Link
-          to={buildLocalizedPath(language, "about")}
-          className="text-slate-light hover:text-primary transition-colors duration-200"
+          to="#about"
+          className="hero-name-gradient"
           dir={isLatinHeroName ? "ltr" : undefined}
           lang={isLatinHeroName ? "en" : undefined}
         >
@@ -71,31 +74,30 @@ export const Hero = () => {
       >
         {t("hero.intro")}
       </p>
-      
       <div data-gsap-hero className="flex gap-5 mt-8">
         <a 
-          href="https://github.com/zakad00e2" 
+          href={personProfiles.github}
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-slate hover:text-slate-light transition-colors duration-200"
+          className="text-[#24292f] transition-opacity duration-200 hover:opacity-70"
           aria-label="GitHub"
         >
           <Github className="w-6 h-6" />
         </a>
         <a 
-          href="https://www.linkedin.com/in/zakariasafi/" 
+          href={personProfiles.linkedin}
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-slate hover:text-slate-light transition-colors duration-200"
+          className="text-[#0a66c2] transition-opacity duration-200 hover:opacity-70"
           aria-label="LinkedIn"
         >
           <Linkedin className="w-6 h-6" />
         </a>
         <a
-          href="https://x.com/Zakariaweb1"
+          href={personProfiles.x}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-slate hover:text-slate-light transition-colors duration-200"
+          className="text-black transition-opacity duration-200 hover:opacity-70"
           aria-label="X"
         >
           <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6" aria-hidden="true">
@@ -106,7 +108,7 @@ export const Hero = () => {
           href="https://wa.me/972597986160" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-slate hover:text-slate-light transition-colors duration-200"
+          className="text-[#168c46] transition-opacity duration-200 hover:opacity-70"
           aria-label="WhatsApp"
         >
           <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">

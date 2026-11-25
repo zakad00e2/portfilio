@@ -22,15 +22,18 @@ export type Language = keyof typeof languages;
 export const defaultLanguage: Language = "en";
 export const languageCodes = Object.keys(languages) as Language[];
 
-export const sections = ["about", "experience", "projects"] as const;
+export const sections = ["about", "services", "experience", "projects"] as const;
 export type SectionSlug = (typeof sections)[number];
 export const defaultSection: SectionSlug = "about";
 
 export const isLanguage = (value: string | undefined): value is Language =>
-  Boolean(value && value in languages);
+  value === "en" || value === "ar";
 
 export const isSectionSlug = (value: string | undefined): value is SectionSlug =>
   Boolean(value && sections.includes(value as SectionSlug));
+
+export const isLegacySection = (value: string): value is Exclude<SectionSlug, "services"> =>
+  isSectionSlug(value) && value !== "services";
 
 const getPathSegments = (pathname: string) =>
   pathname
@@ -58,8 +61,8 @@ export const getStoredLanguage = (): Language => {
   }
 
   try {
-    const storedLanguage = window.localStorage.getItem(languageStorageKey);
-    return isLanguage(storedLanguage ?? undefined) ? storedLanguage : defaultLanguage;
+    const storedLanguage = window.localStorage.getItem(languageStorageKey) ?? undefined;
+    return isLanguage(storedLanguage) ? storedLanguage : defaultLanguage;
   } catch {
     return defaultLanguage;
   }

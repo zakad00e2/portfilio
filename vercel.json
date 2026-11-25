@@ -1,8 +1,21 @@
 {
-  "rewrites": [
-    {
-      "source": "/:path*",
-      "destination": "/index.html"
-    }
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "routes": [
+    { "src": "/en", "caseSensitive": true, "dest": "/en.html" },
+    { "src": "/ar", "caseSensitive": true, "dest": "/ar.html" },
+    { "src": "/(ar|en)/blog(?:/|\\.html)", "caseSensitive": true, "status": 301, "headers": { "Location": "/$1/blog" } },
+    { "src": "/(ar|en)/blog/([a-z0-9]+(?:-[a-z0-9]+)*)(?:/|\\.html)", "caseSensitive": true, "status": 301, "headers": { "Location": "/$1/blog/$2" } },
+    { "src": "/(ar|en)/blog", "caseSensitive": true, "dest": "/$1/blog.html" },
+    { "src": "/(ar|en)/blog/([a-z0-9]+(?:-[a-z0-9]+)*)", "caseSensitive": true, "dest": "/$1/blog/$2.html", "check": true },
+    { "src": "/[Ee][Nn]/(about|experience|projects)/?", "caseSensitive": true, "status": 301, "headers": { "Location": "/en#$1" } },
+    { "src": "/[Aa][Rr]/(about|experience|projects)/?", "caseSensitive": true, "status": 301, "headers": { "Location": "/ar#$1" } },
+    { "src": "/[Ee][Nn](?:/|(?:/index)?\\.html)?", "caseSensitive": true, "status": 301, "headers": { "Location": "/en" } },
+    { "src": "/[Aa][Rr](?:/|(?:/index)?\\.html)?", "caseSensitive": true, "status": 301, "headers": { "Location": "/ar" } },
+    { "src": "/index\\.html", "caseSensitive": true, "status": 301, "headers": { "Location": "/" } },
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/(resume\\.pdf|google85f0118633a54026\\.html)", "caseSensitive": true, "headers": { "X-Robots-Tag": "noindex, follow" }, "continue": true },
+    { "src": "/404\\.html", "caseSensitive": true, "status": 404, "dest": "/404.html" },
+    { "handle": "filesystem" },
+    { "src": "/.*", "status": 404, "dest": "/404.html" }
   ]
 }

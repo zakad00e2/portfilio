@@ -2,11 +2,12 @@ export const resources = {
   en: {
     translation: {
       seo: {
-        title: "Zakaria Safi | Front-End Engineer",
+        title: "Zakaria Safi | E-commerce, Business & Portfolio Websites",
         description:
-          "Portfolio of Zakaria Safi, a front-end engineer building accessible, pixel-perfect web experiences with React, TypeScript, and modern UI systems.",
+          "Zakaria Safi builds e-commerce stores, business websites and professional portfolios in Arabic and English. Explore his services, projects and experience.",
         author: "Zakaria Safi",
         siteName: "Zakaria Safi Portfolio",
+        imageAlt: "Zakaria Safi’s web development portfolio",
       },
       common: {
         skipToContent: "Skip to Content",
@@ -16,9 +17,18 @@ export const resources = {
       },
       navigation: {
         ariaLabel: "In-page navigation",
+        menu: "Menu",
         about: "ABOUT",
+        services: "SERVICES",
         experience: "EXPERIENCE",
         projects: "PROJECTS",
+        blog: "Blog",
+      },
+      blog: {
+        title: "Blog",
+        description: "Articles on building and improving websites, online stores, and web applications.",
+        empty: "Articles will appear here when they’re published.",
+        portfolio: "Portfolio",
       },
       hero: {
         name: "Zakaria Safi",
@@ -29,9 +39,30 @@ export const resources = {
       about: {
         sectionTitle: "About",
         paragraphs: [
-          "I am a software engineer passionate about building end-to-end web applications that combine exceptional user experiences, robust back-end architecture, and reliable performance. I believe a successful digital product depends not only on its appearance, but also on the quality of its implementation, ease of use, and scalability. That is why I build balanced solutions that meet user needs and business goals at the same time.",
-          "I currently work as a freelance software developer, helping businesses and individuals turn their ideas into complete web applications. My work spans requirements analysis and system architecture, front-end and back-end development, and launching production-ready products built to grow. I focus on modern, fast, and secure solutions grounded in best practices and contemporary web technologies.",
-          "Throughout my career, I have gained hands-on experience developing complete digital products, from understanding client needs and defining the right solution to delivering it with clean, maintainable code. I approach every project with an engineering mindset focused on detail, software quality, performance, and scalability—delivering applications that not only look professional, but also create real value and help clients achieve their goals with confidence.",
+          "I am a <strong>software engineer</strong> passionate about building <strong>end-to-end web applications</strong> that combine exceptional user experiences, robust back-end architecture, and reliable performance. I believe a successful digital product depends not only on its appearance, but also on the quality of its implementation, ease of use, and scalability. That is why I build balanced solutions that meet <strong>user needs and business goals</strong> at the same time.",
+          "I currently work as a <strong>freelance software developer</strong>, helping businesses and individuals turn their ideas into complete web applications. My work spans requirements analysis and system architecture, front-end and back-end development, and launching production-ready products built to grow. I focus on <strong>modern, fast, and secure solutions</strong> grounded in best practices and contemporary web technologies.",
+          "Throughout my career, I have gained hands-on experience developing complete digital products, from understanding client needs and defining the right solution to delivering it with <strong>clean, maintainable code</strong>. I approach every project with an engineering mindset focused on detail, software quality, performance, and scalability—delivering applications that not only look professional, but also <strong>create real value</strong> and help clients achieve their goals with confidence.",
+        ],
+      },
+      services: {
+        sectionTitle: "Services",
+        examplesLabel: "Selected work",
+        items: [
+          {
+            title: "E-commerce Website Development",
+            description: "I build responsive online stores with product and category pages and a checkout flow tailored to the business.",
+            examples: ["jaha", "unsporty"],
+          },
+          {
+            title: "Professional Portfolio Websites",
+            description: "I build portfolio websites for experts and service providers to present their work, explain their services, and help clients get in touch.",
+            examples: ["besan-khalaily", "architectural-portfolio"],
+          },
+          {
+            title: "Corporate and Institutional Websites",
+            description: "I build company websites that explain what the business does, present its services and work, and give visitors a clear way to contact the team.",
+            examples: ["vantage-tech", "oday-tourism"],
+          },
         ],
       },
       experience: {
@@ -75,9 +106,11 @@ export const resources = {
       },
       projects: {
         sectionTitle: "Projects",
+        showMore: "Show more",
+        imageAlt: "Screenshot of {{title}}",
         items: [
           {
-            image: "/jaha.png",
+            id: "jaha",
             title: "JAHA",
             description:
               "Design and development of an e-commerce storefront for JAHA, a resortwear and swimwear brand, with a visual identity inspired by coastal living and fashion elegance. The store offers a responsive Arabic and English browsing experience, with visually engaging pages showcasing its collections and brand story.",
@@ -85,7 +118,7 @@ export const resources = {
             url: "https://jaha.sa/",
           },
           {
-            image: "/unsporty.png",
+            id: "unsporty",
             title: "UNSPORTY",
             description:
               "End-to-end development of a Zid e-commerce storefront for UNSPORTY, including the interface and user experience, product and category pages, navigation, cart, wishlist, responsive mobile design, and a contemporary visual identity.",
@@ -93,7 +126,7 @@ export const resources = {
             url: "https://unsporty.com/",
           },
           {
-            image: "/besan-khalaily.png",
+            id: "besan-khalaily",
             title: "Besan Khalaily",
             description:
               "A bilingual digital platform and brand website for fashion designer Besan Khalaily, bringing together her portfolio, services, workshop and consultation bookings. It includes a responsive Arabic/English experience, appointment booking, and a private dashboard to manage bookings, clients, available time slots, and request statuses, with an elegant visual identity, SEO, and full RTL support.",
@@ -101,7 +134,7 @@ export const resources = {
             url: "https://www.besankhalaily.com/",
           },
           {
-            image: "/safi-cashier.png",
+            id: "safi-cashier",
             title: "Safi Cashier",
             description:
               "A cashier and sales management app tailored for small stores, with a fully Arabic RTL interface. It includes product, inventory, customer, invoice, and debt management, plus a fast point-of-sale screen with barcode support, multiple payment methods, and daily reports for tracking revenue and profit.",
@@ -109,7 +142,7 @@ export const resources = {
             url: "https://safipos.vercel.app/",
           },
           {
-            image: "/pelmatech.png",
+            id: "pelmatech",
             title: "Pelmatech",
             description:
               "A digital health platform that helps users manage a healthier lifestyle with tools for tracking fitness goals, monitoring nutrition, and organizing workouts in one place. The platform is designed to make health management more flexible, fast, and clear, supported by a team focused on improving the experience and providing reliable help when needed.",
@@ -117,7 +150,7 @@ export const resources = {
             url: "https://health-beta-lilac.vercel.app/",
           },
           {
-            image: "/athr.png",
+            id: "athr",
             title: "Athr",
             description:
               "Athr is a bilingual Portfolio & CMS web platform created for Dema to showcase her work in creative consulting, event design, and brand experience production. The site pairs a modern Arabic/English interface with smooth interactive motion, and includes public pages for projects and workshops plus a custom admin panel for managing content and events.",
@@ -125,7 +158,7 @@ export const resources = {
             url: "https://www.leaveanathr.com/",
           },
           {
-            image: "/oday-tourism.png",
+            id: "oday-tourism",
             title: "Oday Tourism",
             description:
               "A multilingual tourism web platform that lets users browse and book hotels, travel programs, and airport reception services with ease. It includes a booking cart and a complete admin dashboard, with a strong focus on performance, responsive user experience, and SEO-friendly delivery.",
@@ -133,7 +166,7 @@ export const resources = {
             url: "https://www.odaytourism.com/ar",
           },
           {
-            image: "/architectural-portfolio.png",
+            id: "architectural-portfolio",
             title: "Architectural Portfolio",
             description:
               "A modern interactive website for a studio specializing in residential space renovation and improvement services. It presents the studio's services, previous work gallery, and client contact flow through a polished interface designed to communicate quality, function, and visual refinement.",
@@ -141,7 +174,7 @@ export const resources = {
             url: "https://archeng.vercel.app/",
           },
           {
-            image: "/vantage-tech.png",
+            id: "vantage-tech",
             title: "Vantage Tech",
             description:
               "An enterprise web platform for a tech company specialized in legal systems and digital solutions, featuring an interactive user experience and cinematic motion effects, built with the latest Next.js technologies.",
@@ -149,7 +182,7 @@ export const resources = {
             url: "https://techvantage-website.vercel.app/ar",
           },
           {
-            image: "/Screenshot 2026-02-11 231128.png",
+            id: "maisam",
             title: "Maisam",
             description:
               "Design and development of a full-featured website for coach Maisam, offering personalized health and nutrition services for women. The site presents services in a modern, engaging style, including programs for pregnant and breastfeeding women, health workshops, and personal coaching, with a strong focus on a comfortable user experience that reflects the vision of a balanced, healthy lifestyle.",
@@ -157,7 +190,7 @@ export const resources = {
             url: "https://www.withmaysam.com/",
           },
           {
-            image: "/Screenshot 2026-02-11 225245.png",
+            id: "sakan-gaza",
             title: "SakanGaza",
             description:
               "Sakan Gaza is a volunteer housing platform that helps displaced people in Gaza find homes for rent or purchase. It features a fully Arabic RTL interface built with React and TypeScript, uses Supabase for authentication and storage, and includes listing management, image uploads, search filters, and admin moderation tools.",
@@ -165,7 +198,7 @@ export const resources = {
             url: "https://sakangaza.com/",
           },
           {
-            image: "/market.png",
+            id: "marketpro",
             title: "MarketPro",
             description:
               "Interactive multi-vendor e-commerce UI. Includes product/category pages, dynamic cart, vendor pages, seller dashboard, and key support pages, focused on clean architecture and a smooth user experience.",
@@ -173,7 +206,7 @@ export const resources = {
             url: "https://arise-market-core.vercel.app/",
           },
           {
-            image: "/stayle.png",
+            id: "elara",
             title: "ELARA - Timeless Fashion & Conscious Design.",
             description:
               "Designed and developed a full e-commerce website for a luxury fashion brand, delivering a modern, elegant UI and a seamless shopping experience. The site includes product and collection pages, a complete shopping cart system, and robust state management, with responsive performance across all devices.",
@@ -181,7 +214,7 @@ export const resources = {
             url: "https://style-blueprint.vercel.app/",
           },
           {
-            image: "/art.png",
+            id: "artist-lens-hub",
             title: "Artist Lens Hub",
             description:
               "Portfolio for a contemporary visual artist, designed to showcase abstract artworks in an elegant, gallery-inspired layout. Built with React, Vite, and Tailwind CSS, it features a captivating hero section, a curated gallery experience, and a dedicated contact area for inquiries and commission requests, all optimized for a smooth and immersive user experience.",
@@ -189,7 +222,7 @@ export const resources = {
             url: "https://artist-lens-hub-kqu1.vercel.app/",
           },
           {
-            image: "/3.png",
+            id: "tshtri",
             title: "Tshtri",
             description:
               "Tshtri is a comprehensive e-commerce platform that offers a seamless shopping experience. It features a user-friendly interface, secure payment gateways, and robust inventory management, making it easy for businesses to sell products online.",
@@ -208,11 +241,12 @@ export const resources = {
   ar: {
     translation: {
       seo: {
-        title: "زكريا صافي | مهندس واجهـــات أماميـــة",
+        title: "زكريا صافي | تطوير المتاجر الإلكترونية ومواقع الشركات ومعارض الأعمال",
         description:
-          "معرض أعمال زكريا صافي، مهندس واجهات أمامية يبني تجارب ويب دقيقة، سهلة الوصول، وسريعة باستخدام React وTypeScript وأنظمة واجهات حديثة.",
+          "يطوّر زكريا صافي متاجر إلكترونية ومواقع للشركات ومعارض أعمال باللغتين العربية والإنجليزية. تعرّف على خدماته ومشاريعه وخبرته.",
         author: "زكريا صافي",
         siteName: "معرض أعمال زكريا صافي",
+        imageAlt: "معرض أعمال زكريا صافي في تطوير مواقع الويب",
       },
       common: {
         skipToContent: "تجاوز إلى المحتوى",
@@ -222,9 +256,18 @@ export const resources = {
       },
       navigation: {
         ariaLabel: "التنقل داخل الصفحة",
+        menu: "القائمة",
         about: "نبذة عني",
+        services: "الخدمات",
         experience: "الخبرات",
         projects: "المشاريع",
+        blog: "المدونة",
+      },
+      blog: {
+        title: "المدونة",
+        description: "مقالات عن بناء المواقع والمتاجر الإلكترونية وتطبيقات الويب وتحسينها.",
+        empty: "تظهر المقالات هنا عند نشرها.",
+        portfolio: "معرض أعمالي",
       },
       hero: {
         name: "زكــــريا صافي",
@@ -234,9 +277,30 @@ export const resources = {
       about: {
         sectionTitle: "نبذة عني",
         paragraphs: [
-          "أنا مهندس برمجيات شغوف ببناء تطبيقات ويب متكاملة تجمع بين تجربة مستخدم مميزة، وبنية خلفية قوية، وأداء موثوق. أؤمن أن نجاح أي منتج رقمي لا يعتمد على المظهر فقط، بل على جودة التنفيذ، وسهولة الاستخدام، وقابلية التوسع، لذلك أحرص على تطوير حلول متوازنة تلبي احتياجات المستخدمين وأهداف الأعمال في الوقت نفسه.",
-          "أعمل حالياً كمطور برمجيات مستقل، وأساعد الشركات والأفراد على تحويل أفكارهم إلى تطبيقات ويب متكاملة، بدءاً من تحليل المتطلبات وتصميم هيكل النظام، مروراً بتطوير الواجهات الأمامية والخدمات الخلفية، ووصولاً إلى إطلاق منتجات جاهزة للاستخدام وقابلة للنمو. أركز على بناء حلول حديثة، سريعة، وآمنة، تعتمد على أفضل الممارسات وتقنيات الويب المعاصرة.",
-          "خلال مسيرتي، اكتسبت خبرة عملية في تطوير منتجات رقمية متكاملة، بدءاً من فهم احتياجات العميل وصياغة الحلول المناسبة، وصولاً إلى تنفيذها بكود منظم وقابل للصيانة. أتعامل مع كل مشروع بعقلية هندسية تهتم بالتفاصيل، وجودة البرمجيات، والأداء، وقابلية التوسع، بهدف تقديم تطبيقات لا تبدو احترافية فحسب، بل توفر قيمة حقيقية وتساعد العملاء على تحقيق أهدافهم بثقة.",
+          "أنا <strong>مهندس برمجيات</strong> شغوف ببناء <strong>تطبيقات ويب متكاملة</strong> تجمع بين تجربة مستخدم مميزة، وبنية خلفية قوية، وأداء موثوق. أؤمن أن نجاح أي منتج رقمي لا يعتمد على المظهر فقط، بل على جودة التنفيذ، وسهولة الاستخدام، وقابلية التوسع، لذلك أحرص على تطوير حلول متوازنة تلبي <strong>احتياجات المستخدمين وأهداف الأعمال</strong> في الوقت نفسه.",
+          "أعمل حالياً <strong>كمطور برمجيات مستقل</strong>، وأساعد الشركات والأفراد على تحويل أفكارهم إلى تطبيقات ويب متكاملة، بدءاً من تحليل المتطلبات وتصميم هيكل النظام، مروراً بتطوير الواجهات الأمامية والخدمات الخلفية، ووصولاً إلى إطلاق منتجات جاهزة للاستخدام وقابلة للنمو. أركز على بناء <strong>حلول حديثة، سريعة، وآمنة</strong>، تعتمد على أفضل الممارسات وتقنيات الويب المعاصرة.",
+          "خلال مسيرتي، اكتسبت خبرة عملية في تطوير منتجات رقمية متكاملة، بدءاً من فهم احتياجات العميل وصياغة الحلول المناسبة، وصولاً إلى تنفيذها <strong>بكود منظم وقابل للصيانة</strong>. أتعامل مع كل مشروع بعقلية هندسية تهتم بالتفاصيل، وجودة البرمجيات، والأداء، وقابلية التوسع، بهدف تقديم تطبيقات لا تبدو احترافية فحسب، بل توفر <strong>قيمة حقيقية</strong> وتساعد العملاء على تحقيق أهدافهم بثقة.",
+        ],
+      },
+      services: {
+        sectionTitle: "الخدمات",
+        examplesLabel: "نماذج من أعمالي",
+        items: [
+          {
+            title: "تطوير المتاجر الإلكترونية",
+            description: "أطوّر متاجر إلكترونية متجاوبة، بصفحات للمنتجات والتصنيفات وخطوات شراء تناسب احتياجات المتجر.",
+            examples: ["jaha", "unsporty"],
+          },
+          {
+            title: "إنشاء معارض أعمال احترافية",
+            description: "أصمّم مواقع للخبراء ومقدّمي الخدمات تعرض أعمالهم، وتوضّح خدماتهم، وتسهّل على العملاء التواصل معهم.",
+            examples: ["besan-khalaily", "architectural-portfolio"],
+          },
+          {
+            title: "تطوير مواقع الشركات والمؤسسات",
+            description: "أبني مواقع تعرّف الزوار بنشاط الشركة، وتعرض خدماتها وأعمالها، وتسهّل التواصل مع فريقها.",
+            examples: ["vantage-tech", "oday-tourism"],
+          },
         ],
       },
       experience: {
@@ -280,9 +344,11 @@ export const resources = {
       },
       projects: {
         sectionTitle: "المشاريع",
+        showMore: "عرض المزيد",
+        imageAlt: "لقطة شاشة لمشروع {{title}}",
         items: [
           {
-            image: "/jaha.png",
+            id: "jaha",
             title: "JAHA",
             description:
               "تصميم وتطوير واجهة متجر إلكتروني لعلامة JAHA المتخصصة في أزياء المنتجعات وملابس السباحة، بهوية بصرية مستوحاة من الروح الساحلية وأناقة الأزياء. يقدّم المتجر تجربة تصفح باللغتين العربية والإنجليزية، مع تصميم متجاوب يناسب مختلف الأجهزة، وصفحات تعرض المجموعات وقصة العلامة بطريقة بصرية جذابة.",
@@ -290,7 +356,7 @@ export const resources = {
             url: "https://jaha.sa/",
           },
           {
-            image: "/unsporty.png",
+            id: "unsporty",
             title: "UNSPORTY",
             description:
               "تطوير متجر إلكتروني متكامل من الصفر على منصة زد لعلامة UNSPORTY، شمل بناء الواجهة وتجربة المستخدم، صفحات المنتجات والتصنيفات، التنقل، السلة والمفضلة، مع تصميم متجاوب للجوال وهوية بصرية عصرية.",
@@ -298,7 +364,7 @@ export const resources = {
             url: "https://unsporty.com/",
           },
           {
-            image: "/besan-khalaily.png",
+            id: "besan-khalaily",
             title: "بيسان خلايلي",
             description:
               "موقع وهوية رقمية لمصممة أزياء ، يجمع بين عرض الأعمال والخدمات وحجز ورش العمل والاستشارات. يتضمن واجهة عربية وإنجليزية متجاوبة، ونظام حجز للمواعيد، ولوحة تحكم خاصة لإدارة الحجوزات والعملاء والمواعيد المتاحة وحالات الطلبات، مع طابع بصري أنيق وتحسينات لمحركات البحث ودعم كامل لاتجاه الكتابة العربي.",
@@ -306,7 +372,7 @@ export const resources = {
             url: "https://www.besankhalaily.com/",
           },
           {
-            image: "/safi-cashier.png",
+            id: "safi-cashier",
             title: "صافي كاشير",
             description:
               "تطبيق كاشير وإدارة مبيعات مخصص للمتاجر الصغيرة، بواجهة عربية كاملة تدعم اتجاه RTL. يوفّر إدارة المنتجات والمخزون والعملاء والفواتير والديون، مع شاشة بيع سريعة تدعم الباركود وطرق الدفع المختلفة، وتقارير يومية لمتابعة الإيرادات والأرباح.",
@@ -314,7 +380,7 @@ export const resources = {
             url: "https://safipos.vercel.app/",
           },
           {
-            image: "/pelmatech.png",
+            id: "pelmatech",
             title: "Pelmatech",
             description:
               "منصة صحية رقمية تساعدك على إدارة نمط حياتك الصحي بسهولة، من خلال متابعة أهداف اللياقة، مراقبة التغذية، وتنظيم التمارين في مكان واحد. صُممت المنصة لتمنح المستخدم تجربة صحية أكثر مرونة، سرعة، ووضوحًا، مع فريق يعمل على تحسين التجربة وتقديم دعم موثوق عند الحاجة.",
@@ -322,7 +388,7 @@ export const resources = {
             url: "https://health-beta-lilac.vercel.app/",
           },
           {
-            image: "/athr.png",
+            id: "athr",
             title: "أثر",
             description:
               "منصة ثنائية اللغة تجمع بين معرض أعمال ونظام إدارة محتوى، صممت لديما لعرض أعمالها في الاستشارات الإبداعية، تصميم الفعاليات، وإنتاج تجارب العلامات التجارية. يجمع الموقع بين واجهة عربية/إنجليزية حديثة وحركة تفاعلية سلسة، مع صفحات عامة للمشاريع والورش ولوحة إدارة مخصصة للمحتوى والفعاليات.",
@@ -330,7 +396,7 @@ export const resources = {
             url: "https://www.leaveanathr.com/",
           },
           {
-            image: "/oday-tourism.png",
+            id: "oday-tourism",
             title: "عدي للسياحة",
             description:
               "منصة سياحية متعددة اللغات تتيح للمستخدمين تصفح وحجز الفنادق والبرامج السياحية وخدمات الاستقبال في المطار بسهولة. تضم سلة حجز ولوحة إدارة متكاملة، مع تركيز واضح على الأداء، التجاوب، وتحسين الظهور في محركات البحث.",
@@ -338,7 +404,7 @@ export const resources = {
             url: "https://www.odaytourism.com/ar",
           },
           {
-            image: "/architectural-portfolio.png",
+            id: "architectural-portfolio",
             title: "معرض أعمال معماري",
             description:
               "موقع تفاعلي حديث لاستوديو متخصص في تجديد وتحسين المساحات السكنية. يعرض الخدمات، نماذج الأعمال السابقة، ومسار تواصل العملاء من خلال واجهة مصقولة تعكس الجودة والوظيفة والاهتمام بالتفاصيل البصرية.",
@@ -346,7 +412,7 @@ export const resources = {
             url: "https://archeng.vercel.app/",
           },
           {
-            image: "/vantage-tech.png",
+            id: "vantage-tech",
             title: "فانتج تك",
             description:
               "منصة ويب مؤسسية لشركة تقنية متخصصة في الأنظمة القانونية والحلول الرقمية، تتميز بتجربة مستخدم تفاعلية وتأثيرات حركية سينمائية، مبنية بأحدث تقنيات Next.js.",
@@ -354,7 +420,7 @@ export const resources = {
             url: "https://techvantage-website.vercel.app/ar",
           },
           {
-            image: "/Screenshot 2026-02-11 231128.png",
+            id: "maisam",
             title: "ميسم",
             description:
               "تصميم وتطوير موقع متكامل للمدربة ميسم، يعرض خدمات الصحة والتغذية المخصصة للنساء. يقدم الموقع البرامج والخدمات بأسلوب حديث وجذاب، بما في ذلك برامج الحوامل والمرضعات، الورش الصحية، والتدريب الشخصي، مع تجربة استخدام مريحة تعكس رؤية حياة صحية ومتوازنة.",
@@ -362,7 +428,7 @@ export const resources = {
             url: "https://www.withmaysam.com/",
           },
           {
-            image: "/Screenshot 2026-02-11 225245.png",
+            id: "sakan-gaza",
             title: "سكن غزة",
             description:
               "منصة إسكان تطوعية تساعد النازحين في غزة على العثور على منازل للإيجار أو الشراء. تعتمد واجهة عربية كاملة باتجاه RTL مبنية بـ React وTypeScript، وتستخدم Supabase للمصادقة والتخزين، مع إدارة إعلانات، رفع صور، فلاتر بحث، وأدوات إشراف للإدارة.",
@@ -370,7 +436,7 @@ export const resources = {
             url: "https://sakangaza.com/",
           },
           {
-            image: "/market.png",
+            id: "marketpro",
             title: "MarketPro",
             description:
               "واجهة تجارة إلكترونية تفاعلية متعددة البائعين، تشمل صفحات المنتجات والتصنيفات، سلة ديناميكية، صفحات البائعين، لوحة تحكم للبائع، وصفحات دعم أساسية، مع تركيز على بنية واضحة وتجربة استخدام سلسة.",
@@ -378,7 +444,7 @@ export const resources = {
             url: "https://arise-market-core.vercel.app/",
           },
           {
-            image: "/stayle.png",
+            id: "elara",
             title: "إيلارا - أزياء خالدة وتصميم واع",
             description:
               "تصميم وتطوير متجر إلكتروني كامل لعلامة أزياء فاخرة، بواجهة أنيقة وحديثة وتجربة تسوق سلسة. يضم الموقع صفحات منتجات ومجموعات، نظام سلة متكامل، وإدارة حالة قوية، مع أداء متجاوب على مختلف الأجهزة.",
@@ -386,7 +452,7 @@ export const resources = {
             url: "https://style-blueprint.vercel.app/",
           },
           {
-            image: "/art.png",
+            id: "artist-lens-hub",
             title: "Artist Lens Hub",
             description:
               "معرض أعمال لفنان بصري معاصر، صمم لعرض الأعمال التجريدية ضمن تجربة أنيقة مستوحاة من صالات العرض. بُني باستخدام React وVite وTailwind CSS، ويضم قسماً افتتاحياً جذاباً، تجربة معرض منتقاة، ومنطقة تواصل للاستفسارات وطلبات الأعمال الفنية، مع أداء سلس وتجربة غامرة.",
@@ -394,7 +460,7 @@ export const resources = {
             url: "https://artist-lens-hub-kqu1.vercel.app/",
           },
           {
-            image: "/3.png",
+            id: "tshtri",
             title: "Tshtri",
             description:
               "منصة تجارة إلكترونية شاملة تقدم تجربة تسوق سلسة، بواجهة سهلة الاستخدام، بوابات دفع آمنة، وإدارة مخزون قوية، مما يساعد الأعمال على بيع منتجاتها عبر الإنترنت بسهولة.",

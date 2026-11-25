@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 export const About = () => {
   const { t } = useTranslation();
@@ -12,10 +12,19 @@ export const About = () => {
         </h2>
       </div>
 
+      <img
+        data-gsap-reveal
+        src="/images/zakaria-safi-color.png"
+        alt={t("hero.name")}
+        width="80"
+        height="80"
+        className="mb-6 h-20 w-20 rounded-xl object-cover object-top"
+      />
+
       <div className="space-y-4 text-slate leading-relaxed">
-        {paragraphs.map((paragraph) => (
+        {paragraphs.map((paragraph, index) => (
           <p key={paragraph} data-gsap-reveal>
-            {paragraph}
+            <Trans i18nKey={`about.paragraphs.${index}`} components={{ strong: <strong className="font-medium text-black" /> }} />
           </p>
         ))}
       </div>

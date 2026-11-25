@@ -1,0 +1,17 @@
+export const projectImages = {
+  "jaha": { src: "/jaha.png", width: 1892, height: 1078 },
+  "unsporty": { src: "/unsporty.png", width: 1897, height: 1079 },
+  "besan-khalaily": { src: "/besan-khalaily.png", width: 1897, height: 1078 },
+  "safi-cashier": { src: "/safi-cashier.png", width: 1897, height: 1079 },
+  "pelmatech": { src: "/pelmatech.png", width: 1901, height: 858 },
+  "athr": { src: "/athr.png", width: 1896, height: 1079 },
+  "oday-tourism": { src: "/oday-tourism.png", width: 1895, height: 1078 },
+  "architectural-portfolio": { src: "/architectural-portfolio.png", width: 1877, height: 847 },
+  "vantage-tech": { src: "/vantage-tech.png", width: 1024, height: 579 },
+  "maisam": { src: "/Screenshot 2026-02-11 231128.png", width: 1897, height: 1078 },
+  "sakan-gaza": { src: "/Screenshot 2026-02-11 225245.png", width: 1887, height: 862 },
+  "marketpro": { src: "/market.png", width: 1897, height: 866 },
+  "elara": { src: "/stayle.png", width: 1892, height: 863 },
+  "artist-lens-hub": { src: "/art.png", width: 1895, height: 863 },
+  "tshtri": { src: "/3.png", width: 1673, height: 858 },
+} as const;

@@ -1,82 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      (function () {
-        try {
-          var pathLanguage = window.location.pathname.split("/").filter(Boolean)[0];
-          var storedLanguage = window.localStorage.getItem("zakaria-portfolio-language");
-          var language =
-            pathLanguage === "ar" || pathLanguage === "en"
-              ? pathLanguage
-              : storedLanguage === "ar" || storedLanguage === "en"
-                ? storedLanguage
-                : "en";
-
-          document.documentElement.lang = language;
-          document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
-
-          if (language === "ar") {
-            [
-              "/fonts/thmanyahsans-Regular.woff2",
-              "/fonts/thmanyahsans-Medium.woff2",
-              "/fonts/thmanyahserifdisplay-Bold.woff2",
-            ].forEach(function (href) {
-              var preload = document.createElement("link");
-              preload.rel = "preload";
-              preload.as = "font";
-              preload.type = "font/woff2";
-              preload.href = href;
-              preload.crossOrigin = "anonymous";
-              document.head.appendChild(preload);
-            });
-          }
-        } catch (error) {
-          document.documentElement.lang = "en";
-          document.documentElement.dir = "ltr";
-        }
-      })();
-    </script>
-    <title>Zakaria Safi | Front-End Engineer</title>
-    <meta
-      name="description"
-      content="Portfolio of Zakaria Safi, a front-end engineer building accessible, pixel-perfect web experiences."
-    />
-    <meta name="author" content="Zakaria Safi" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!--seo-head-->
+    <link rel="icon" type="image/png" href="/images/zakaria-favicon-rounded.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-
-    <meta property="og:title" content="Zakaria Safi | Front-End Engineer" />
-    <meta
-      property="og:description"
-      content="Portfolio of Zakaria Safi, a front-end engineer building accessible, pixel-perfect web experiences."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://zakariasafi.me/" />
-    <meta property="og:image" content="https://zakariasafi.me/og-preview.png" />
-    <meta property="og:image:secure_url" content="https://zakariasafi.me/og-preview.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1201" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Zakaria Safi portfolio homepage" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Zakaria Safi | Front-End Engineer" />
-    <meta
-      name="twitter:description"
-      content="Portfolio of Zakaria Safi, a front-end engineer building accessible, pixel-perfect web experiences."
-    />
-    <meta name="twitter:image" content="https://zakariasafi.me/og-preview.png" />
-    <meta name="twitter:image:alt" content="Zakaria Safi portfolio homepage" />
   </head>
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

@@ -19,8 +19,8 @@ export const Experience = () => {
   const iconClassName = cn(
     "ms-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform motion-reduce:transition-none",
     isRtl
-      ? "group-hover/link:-translate-x-1 group-hover/link:-translate-y-1 group-focus-visible/link:-translate-x-1 group-focus-visible/link:-translate-y-1"
-      : "group-hover/link:translate-x-1 group-hover/link:-translate-y-1 group-focus-visible/link:translate-x-1 group-focus-visible/link:-translate-y-1",
+      ? "group-focus-visible/link:-translate-x-1 group-focus-visible/link:-translate-y-1"
+      : "group-focus-visible/link:translate-x-1 group-focus-visible/link:-translate-y-1",
   );
 
   return (
@@ -32,7 +32,7 @@ export const Experience = () => {
       </div>
 
       <div>
-        <ol className="group/list">
+        <ol>
           {experiences.map((exp) => {
             const titleContent = (
               <span>
@@ -53,9 +53,7 @@ export const Experience = () => {
 
             return (
               <li key={`${exp.period}-${exp.title}`} className="mb-12" data-gsap-reveal>
-                <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                  <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-lg transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-light/[0.03] lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
-
+                <div className="relative grid gap-4 pb-1 sm:grid-cols-8 sm:gap-8 md:gap-4">
                   <header className="z-10 mb-2 mt-1 text-xs font-normal uppercase tracking-wide text-slate sm:col-span-2" aria-label={exp.period}>
                     {exp.period}
                   </header>
@@ -67,7 +65,7 @@ export const Experience = () => {
                           href={exp.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group/link inline-flex items-baseline font-medium leading-tight text-slate-light hover:text-primary focus-visible:text-primary text-base"
+                          className="group/link inline-flex items-baseline font-medium leading-tight text-slate-light focus-visible:text-primary text-base"
                           aria-label={
                             exp.company
                               ? t("experience.linkLabel", { title: exp.title, company: exp.company })
@@ -91,7 +89,7 @@ export const Experience = () => {
                     <ul className="mt-2 flex flex-wrap" aria-label={t("common.technologiesUsed")}>
                       {exp.technologies.map((tech) => (
                         <li key={tech} className="me-1.5 mt-2">
-                          <div className="flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium leading-5 text-primary">
+                          <div className="flex items-center rounded-full bg-primary/5 px-3 py-1 text-xs font-medium leading-5 text-neutral-600">
                             {tech}
                           </div>
                         </li>
@@ -114,7 +112,7 @@ export const Experience = () => {
             <span className="border-b border-transparent pb-px transition group-hover/link:border-primary motion-reduce:transition-none">
               {t("experience.viewFullResume")}
             </span>
-            <ArrowUpRight className={iconClassName} />
+            <ArrowUpRight className={cn(iconClassName, "group-hover/link:-translate-y-1 ltr:group-hover/link:translate-x-1 rtl:-scale-x-100 rtl:group-hover/link:-translate-x-1")} />
           </a>
         </div>
       </div>

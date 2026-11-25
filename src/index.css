@@ -38,48 +38,56 @@ All colors MUST be HSL.
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Thmanyah Sans';
+  src: url('/fonts/thmanyahsans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
-    --background: 218 25% 9%;
-    --foreground: 217 19% 60%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 28%;
 
-    --card: 217 28% 12%;
-    --card-foreground: 217 19% 60%;
+    --card: 0 0% 97%;
+    --card-foreground: 0 0% 15%;
 
-    --popover: 217 28% 12%;
-    --popover-foreground: 217 19% 60%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 15%;
 
-    --primary: 169 84% 78%;
-    --primary-foreground: 218 25% 9%;
+    --primary: 0 0% 20%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217 28% 12%;
-    --secondary-foreground: 217 19% 60%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 15%;
 
-    --muted: 217 28% 12%;
-    --muted-foreground: 217 19% 60%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 32%;
 
-    --accent: 169 84% 78%;
-    --accent-foreground: 218 25% 9%;
+    --accent: 0 0% 93%;
+    --accent-foreground: 0 0% 15%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 169 84% 78%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 0 0% 25%;
 
     --radius: 0.5rem;
 
     /* Portfolio specific tokens */
-    --navy: 218 25% 9%;
-    --navy-light: 217 28% 12%;
-    --slate: 217 19% 60%;
-    --slate-light: 226 64% 88%;
-    --cyan: 169 84% 78%;
-    --text-primary: 226 64% 88%;
+    --navy: 0 0% 100%;
+    --navy-light: 0 0% 96%;
+    --slate: 0 0% 32%;
+    --slate-light: 0 0% 10%;
+    --cyan: 0 0% 20%;
+    --text-primary: 0 0% 10%;
   }
 }
 
@@ -142,6 +150,37 @@ All colors MUST be HSL.
 }
 
 @layer components {
+  .blog-header-blur {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: calc(100% + 32px);
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom, hsl(var(--background) / 0.7) 0%, hsl(var(--background) / 0.45) 55%, transparent 100%);
+  }
+
+  .blog-header-blur span {
+    position: absolute;
+    inset: 0;
+  }
+
+  .blog-header-blur span:nth-child(1) { backdrop-filter: blur(16px); mask-image: linear-gradient(to bottom, #000 0%, #000 10%, transparent 45%); }
+  .blog-header-blur span:nth-child(2) { backdrop-filter: blur(8px); mask-image: linear-gradient(to bottom, transparent 0%, #000 10%, #000 25%, transparent 60%); }
+  .blog-header-blur span:nth-child(3) { backdrop-filter: blur(4px); mask-image: linear-gradient(to bottom, transparent 10%, #000 25%, #000 40%, transparent 75%); }
+  .blog-header-blur span:nth-child(4) { backdrop-filter: blur(2px); mask-image: linear-gradient(to bottom, transparent 25%, #000 40%, #000 55%, transparent 90%); }
+  .blog-header-blur span:nth-child(5) { backdrop-filter: blur(1px); mask-image: linear-gradient(to bottom, transparent 40%, #000 55%, #000 70%, transparent 100%); }
+
+  .hero-name-gradient {
+    color: #111011;
+    background-image: linear-gradient(49deg, #111011 0%, rgba(17, 16, 17, 0.6) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   .language-switcher-position {
     width: max-content;
     left: 1rem;

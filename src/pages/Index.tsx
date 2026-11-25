@@ -3,18 +3,23 @@ import { useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
+import { Services } from "@/components/portfolio/Services";
 import { Experience } from "@/components/portfolio/Experience";
 import { Projects } from "@/components/portfolio/Projects";
 import { Navigation } from "@/components/portfolio/Navigation";
 import { MouseFollower } from "@/components/portfolio/MouseFollower";
-import { LanguageSwitcher } from "@/components/portfolio/LanguageSwitcher";
+import { MobileNavigation } from "@/components/portfolio/MobileNavigation";
 import { LocalizedSeo } from "@/components/portfolio/LocalizedSeo";
 import { useGsapReveal } from "@/hooks/use-gsap-reveal";
 import { isLanguage, isSectionSlug, setStoredLanguage } from "@/i18n/locales";
 import { useSmoothScroll } from "@/components/SmoothScroll";
+import { getBlogPath, getBlogPosts } from "@/blog/posts";
+import { useLocale } from "@/hooks/use-locale";
 
 const Index = () => {
   const { i18n, t } = useTranslation();
+  const { language } = useLocale();
+  const posts = getBlogPosts(language);
   const { lang, section } = useParams();
   const location = useLocation();
   const lenis = useSmoothScroll();
@@ -33,34 +38,36 @@ const Index = () => {
   }, [i18n, lang]);
 
   useEffect(() => {
-    if (!isSectionSlug(section)) {
+    const target = location.hash.slice(1) || (isSectionSlug(section) ? section : "");
+    if (!target) {
       return;
     }
 
     const timeoutId = window.setTimeout(() => {
-      const element = document.getElementById(section);
+      const element = document.getElementById(target);
 
       if (!element) {
         return;
       }
 
+      const top = element.getBoundingClientRect().top + window.scrollY - 80;
       if (lenis) {
-        lenis.scrollTo(element, { offset: -80 });
+        lenis.scrollTo(top);
         return;
       }
 
-      window.scrollTo({ top: element.getBoundingClientRect().top + window.scrollY - 80 });
+      window.scrollTo({ top });
     }, 80);
 
     return () => window.clearTimeout(timeoutId);
-  }, [lenis, location.pathname, section]);
+  }, [lenis, location.hash, location.key, section]);
 
   return (
     <div className="min-h-screen bg-background relative">
       <LocalizedSeo />
       <MouseFollower />
-      <div className="language-switcher-position fixed top-4 z-40">
-        <LanguageSwitcher />
+      <div className="language-switcher-position fixed top-4 z-40 flex items-center gap-2">
+        <MobileNavigation />
       </div>
       <a
         href="#content"
@@ -79,8 +86,29 @@ const Index = () => {
 
         <main id="content" className="lg:w-1/2 lg:pt-24 lg:pb-12 px-6 pb-12 md:px-12 lg:ps-6 lg:pe-32">
           <About />
+          <Services />
           <Experience />
           <Projects />
+            <section id="blog" className="mb-16 scroll-mt-16">
+              <h2 className="section-heading mb-6">{t("blog.title")}</h2>
+              {posts.length > 0 ? (
+              <ul className="space-y-8">
+                {posts.map((post) => (
+                  <li key={post.slug}>
+                    <article>
+                      <h3 className="text-base font-medium text-slate-light">
+                        <a className="hover:text-primary" href={getBlogPath(language, post.slug)}>{post.title}</a>
+                      </h3>
+                      <p className="mt-2 leading-relaxed text-slate">{post.description}</p>
+                      <time className="mt-2 block text-sm text-slate" dateTime={post.date}>
+                        {new Intl.DateTimeFormat(language, { dateStyle: "long", timeZone: "UTC" }).format(new Date(post.date))}
+                      </time>
+                    </article>
+                  </li>
+                ))}
+              </ul>
+              ) : <p className="text-slate">{t("blog.empty")}</p>}
+            </section>
         </main>
       </div>
     </div>
