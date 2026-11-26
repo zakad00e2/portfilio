@@ -70,11 +70,11 @@ const Index = () => {
       </div>
       <LocalizedSeo />
       <MouseFollower />
-      <div className="pointer-events-none fixed inset-x-0 top-0 z-40 h-[76px] lg:hidden">
+      <div className="pointer-events-none fixed inset-x-0 top-0 z-40 h-[calc(60px+env(safe-area-inset-top))] lg:hidden">
         <div className="blog-header-blur" aria-hidden="true">
           <span /><span /><span /><span /><span />
         </div>
-        <div className="language-switcher-position pointer-events-auto absolute top-4">
+        <div className="language-switcher-position pointer-events-auto absolute top-[calc(1rem+env(safe-area-inset-top))]">
           <MobileNavigation />
         </div>
       </div>
@@ -98,7 +98,7 @@ const Index = () => {
           <Experience />
           <Projects />
             <section id="blog" className="mb-16 scroll-mt-16">
-              <h2 className="sr-only">{t("blog.title")}</h2>
+              <h2 className="section-heading mb-6">{t("blog.title")}</h2>
               {posts.length > 0 ? (
               <ul className="space-y-8">
                 {posts.map((post) => (

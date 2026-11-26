@@ -210,6 +210,73 @@ All colors MUST be HSL.
 }
 
 @layer components {
+  .mobile-menu-overlay {
+    background: hsl(var(--background) / 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .mobile-menu-overlay[data-state="open"] {
+    animation: mobile-menu-expand 300ms ease-out both;
+  }
+
+  .mobile-menu-overlay[data-state="closed"] {
+    animation: mobile-menu-collapse 200ms ease-in both;
+  }
+
+  .mobile-menu-content[data-state="open"] .mobile-menu-icon-open,
+  .mobile-menu-content[data-state="closed"] .mobile-menu-icon-close {
+    animation: mobile-menu-icon-out 200ms ease-in-out both;
+  }
+
+  .mobile-menu-content[data-state="open"] .mobile-menu-icon-close,
+  .mobile-menu-content[data-state="closed"] .mobile-menu-icon-open {
+    animation: mobile-menu-icon-in 200ms ease-in-out both;
+  }
+
+  .mobile-menu-content[data-state="open"] .mobile-menu-links a {
+    animation: mobile-menu-link-in 220ms ease-out both;
+  }
+
+  .mobile-menu-content[data-state="open"] .mobile-menu-links a:nth-child(1) { animation-delay: 300ms; }
+  .mobile-menu-content[data-state="open"] .mobile-menu-links a:nth-child(2) { animation-delay: 360ms; }
+  .mobile-menu-content[data-state="open"] .mobile-menu-links a:nth-child(3) { animation-delay: 420ms; }
+  .mobile-menu-content[data-state="open"] .mobile-menu-links a:nth-child(4) { animation-delay: 480ms; }
+  .mobile-menu-content[data-state="open"] .mobile-menu-links a:nth-child(5) { animation-delay: 540ms; }
+
+  @keyframes mobile-menu-link-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes mobile-menu-icon-out {
+    from { opacity: 1; transform: rotate(0) scale(1); }
+    to { opacity: 0; transform: rotate(90deg) scale(0.7); }
+  }
+
+  @keyframes mobile-menu-icon-in {
+    from { opacity: 0; transform: rotate(-90deg) scale(0.7); }
+    to { opacity: 1; transform: rotate(0) scale(1); }
+  }
+
+  @keyframes mobile-menu-expand {
+    from { clip-path: inset(0 0 100%); }
+    to { clip-path: inset(0); }
+  }
+
+  @keyframes mobile-menu-collapse {
+    from { clip-path: inset(0); }
+    to { clip-path: inset(0 0 100%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mobile-menu-overlay[data-state],
+    .mobile-menu-content[data-state] .mobile-menu-icon-open,
+    .mobile-menu-content[data-state] .mobile-menu-icon-close,
+    .mobile-menu-content[data-state] .mobile-menu-links a { animation: none; }
+    .mobile-menu-icon-open { display: none; }
+  }
+
   .blog-header-blur {
     position: absolute;
     z-index: -1;
@@ -226,6 +293,12 @@ All colors MUST be HSL.
     position: absolute;
     inset: 0;
   }
+
+  .blog-header-blur span:nth-child(1) { -webkit-backdrop-filter: blur(16px); -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 10%, transparent 45%); }
+  .blog-header-blur span:nth-child(2) { -webkit-backdrop-filter: blur(8px); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 10%, #000 25%, transparent 60%); }
+  .blog-header-blur span:nth-child(3) { -webkit-backdrop-filter: blur(4px); -webkit-mask-image: linear-gradient(to bottom, transparent 10%, #000 25%, #000 40%, transparent 75%); }
+  .blog-header-blur span:nth-child(4) { -webkit-backdrop-filter: blur(2px); -webkit-mask-image: linear-gradient(to bottom, transparent 25%, #000 40%, #000 55%, transparent 90%); }
+  .blog-header-blur span:nth-child(5) { -webkit-backdrop-filter: blur(1px); -webkit-mask-image: linear-gradient(to bottom, transparent 40%, #000 55%, #000 70%, transparent 100%); }
 
   .blog-header-blur span:nth-child(1) { backdrop-filter: blur(16px); mask-image: linear-gradient(to bottom, #000 0%, #000 10%, transparent 45%); }
   .blog-header-blur span:nth-child(2) { backdrop-filter: blur(8px); mask-image: linear-gradient(to bottom, transparent 0%, #000 10%, #000 25%, transparent 60%); }
@@ -333,7 +406,7 @@ All colors MUST be HSL.
   }
 
   html[lang="ar"] .nav-link-text {
-    @apply text-base font-sans font-medium capitalize;
+    @apply text-sm font-sans font-medium capitalize;
     font-family: var(--font-sans);
     font-feature-settings: 'ss01', 'cv11';
     letter-spacing: normal;

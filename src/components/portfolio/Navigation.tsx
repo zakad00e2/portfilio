@@ -30,7 +30,7 @@ export const Navigation = () => {
   }, []);
 
   return (
-    <nav className="hidden lg:mt-16 lg:block" aria-label={t("navigation.ariaLabel")}>
+    <nav className="hidden lg:mt-12 lg:block" aria-label={t("navigation.ariaLabel")}>
       <ul className="flex flex-wrap gap-x-5 gap-y-3 lg:block lg:space-y-6">
         {[...sections, "blog" as const].map((item) => (
           <li key={item}>

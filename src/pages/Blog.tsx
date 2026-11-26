@@ -38,14 +38,14 @@ const Blog = ({ page }: { page: BlogPage }) => {
       <main>
         {post ? (
           <article>
-            <h1 className="mb-5 break-words text-3xl font-bold leading-tight text-slate-light sm:text-4xl">{post.title}</h1>
-            <p className="mb-4 text-base leading-relaxed text-slate-light">{post.description}</p>
+            <h1 className="mb-5 break-words text-2xl font-bold leading-tight text-slate-light sm:text-3xl">{post.title}</h1>
+            <p className="mb-4 text-sm leading-relaxed text-slate-light">{post.description}</p>
             <p className="mb-10 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate">
               <a href={buildLocalizedPath(language)} className="hover:text-primary">{seo.author}</a>
               <time dateTime={post.date}>{formatDate(post.date)}</time>
             </p>
             <div
-              className="overflow-x-auto break-words text-[0.9375rem] leading-loose text-slate-light [&>*+*]:mt-6 [&_a]:text-primary [&_a]:underline [&_blockquote]:border-s-2 [&_blockquote]:border-primary [&_blockquote]:ps-4 [&_h2]:pt-4 [&_h2]:text-2xl [&_h2]:font-bold [&_h3]:text-xl [&_h3]:font-semibold [&_img]:h-auto [&_img]:max-w-full [&_ol]:list-decimal [&_ol]:ps-6 [&_pre]:overflow-x-auto [&_pre]:bg-navy-light [&_pre]:p-4 [&_pre]:text-left [&_pre]:[direction:ltr] [&_td]:py-1 [&_td]:pe-4 [&_th]:pe-4 [&_th]:text-start [&_ul]:list-disc [&_ul]:ps-6"
+              className="overflow-x-auto break-words text-sm leading-loose text-slate-light [&>*+*]:mt-6 [&_a]:text-primary [&_a]:underline [&_blockquote]:border-s-2 [&_blockquote]:border-primary [&_blockquote]:ps-4 [&_h2]:pt-4 [&_h2]:text-xl [&_h2]:font-bold [&_h3]:text-lg [&_h3]:font-semibold [&_img]:h-auto [&_img]:max-w-full [&_ol]:list-decimal [&_ol]:ps-6 [&_pre]:overflow-x-auto [&_pre]:bg-navy-light [&_pre]:p-4 [&_pre]:text-left [&_pre]:[direction:ltr] [&_td]:py-1 [&_td]:pe-4 [&_th]:pe-4 [&_th]:text-start [&_ul]:list-disc [&_ul]:ps-6"
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
           </article>

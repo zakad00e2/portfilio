@@ -58,7 +58,7 @@ export const Experience = () => {
                     {exp.period}
                   </header>
 
-                  <div className="z-10 sm:col-span-6">
+                  <div className="z-10 min-w-0 sm:col-span-6">
                     <h3 className="font-medium leading-snug text-slate-light">
                       {exp.url ? (
                         <a
@@ -86,15 +86,19 @@ export const Experience = () => {
                       {exp.description}
                     </p>
 
-                    <ul className="mt-2 flex flex-wrap" aria-label={t("common.technologiesUsed")}>
-                      {exp.technologies.map((tech) => (
-                        <li key={tech} className="me-1.5 mt-2">
-                          <div className="flex items-center rounded-full bg-primary/5 px-3 py-1 text-xs font-medium leading-5 text-neutral-600">
-                            {tech}
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="relative z-10 mt-2">
+                      <ul className="flex overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:flex-wrap sm:overflow-visible" aria-label={t("common.technologiesUsed")}>
+                        {exp.technologies.map((tech) => (
+                          <li key={tech} className="me-1.5 mt-2 shrink-0 whitespace-nowrap">
+                            <div className="flex items-center rounded-full bg-primary/5 px-3 py-1 text-xs font-medium leading-5 text-neutral-600">
+                              {tech}
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-4 bg-gradient-to-r from-background to-transparent sm:hidden" />
+                      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-4 bg-gradient-to-l from-background to-transparent sm:hidden" />
+                    </div>
                   </div>
                 </div>
               </li>

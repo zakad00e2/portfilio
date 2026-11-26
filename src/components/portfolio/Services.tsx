@@ -23,7 +23,7 @@ export const Services = () => {
               {examples.map((id, index) => (
                 <span key={id}>
                   {index > 0 && (language === "ar" ? "، " : ", ")}
-                  <Link className="group/link inline-flex items-center gap-1 text-primary hover:underline" to={`#project-${id}`}>
+                  <Link className="group/link inline-flex items-center gap-1 text-blue-700 hover:text-blue-800 hover:underline focus-visible:underline" to={`#project-${id}`}>
                     {projectTitles.get(id)}
                     <ArrowUpRight
                       aria-hidden="true"
