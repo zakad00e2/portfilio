@@ -40,11 +40,11 @@ export const Hero = () => {
   return (
     <div ref={heroRef} className="flex min-h-screen flex-col justify-center lg:block lg:min-h-0">
 
-      <div className="flex flex-col-reverse items-start gap-4">
+      <div className="flex flex-col-reverse items-start gap-2">
         <div className="min-w-0">
           <h1
             data-gsap-hero
-            className="portfolio-name-type mb-4"
+            className={`portfolio-name-type mb-3 lg:mb-1 ${isLatinHeroName ? "" : "lg:flex lg:max-w-xs lg:items-center lg:whitespace-nowrap lg:!text-[2.5rem]"}`}
             lang={isLatinHeroName ? "en" : "ar"}
           >
             <Link
@@ -54,6 +54,7 @@ export const Hero = () => {
             >
               {heroName}
             </Link>
+            <img src="/icons/x-verified-gold.svg" alt="" className="ms-2 inline-block h-[0.75em] w-[0.75em] shrink-0 -translate-y-1 align-middle" />
           </h1>
           <p 
             data-gsap-hero
@@ -62,7 +63,7 @@ export const Hero = () => {
           >
             {t("hero.intro")}
           </p>
-          <div data-gsap-hero className="mt-6 flex items-center gap-3">
+          <div data-gsap-hero className="mt-4 flex items-center gap-3">
             <a 
               href={personProfiles.github}
               target="_blank" 
@@ -97,7 +98,7 @@ export const Hero = () => {
               className="text-[#168c46] transition-opacity duration-200 hover:opacity-70"
               aria-label="WhatsApp"
             >
-              <img src="/icons/whatsapp-wikimedia.svg" alt="" className="block h-8 w-8" />
+              <img src="/icons/whatsapp-seeklogo.svg" alt="" className="block h-8 w-8" />
             </a>
           </div>
           <Navigation />
@@ -108,7 +109,7 @@ export const Hero = () => {
             alt={heroName}
             width="144"
             height="144"
-            className="h-28 w-28 rounded-xl object-cover object-top lg:h-20 lg:w-20"
+            className="h-24 w-24 rounded-xl object-cover object-top lg:h-20 lg:w-20"
           />
         </div>
       </div>

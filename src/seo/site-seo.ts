@@ -2,7 +2,7 @@ import { buildLocalizedPath, defaultLanguage, languageCodes, languages, type Lan
 import { resources } from "@/i18n/resources";
 
 export const siteOrigin = "https://www.zakariasafi.me";
-export const portfolioImage = `${siteOrigin}/og-preview.png`;
+export const portfolioImage = `${siteOrigin}/og-portfolio-2026.png`;
 export const personProfiles = {
   github: "https://github.com/zakad00e2",
   linkedin: "https://www.linkedin.com/in/zakariasafi/",
@@ -43,8 +43,8 @@ export const buildSeoDocument = (language: Language) => {
       "og:image": portfolioImage,
       "og:image:secure_url": portfolioImage,
       "og:image:type": "image/png",
-      "og:image:width": "1201",
-      "og:image:height": "630",
+      "og:image:width": "1895",
+      "og:image:height": "1078",
       "og:image:alt": seo.imageAlt,
     },
   };

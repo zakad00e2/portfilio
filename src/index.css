@@ -315,7 +315,8 @@ All colors MUST be HSL.
   }
 
   .hero-name-gradient:lang(ar) {
-    /* Extend the background behind the final yeh dots below the text box. */
+    /* Extend the gradient behind Arabic dots above and below the text box. */
+    padding-block-start: 0.25em;
     padding-block-end: 0.25em;
   }
 
