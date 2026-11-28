@@ -86,8 +86,7 @@ const Index = () => {
       </a>
       
       <div className="lg:flex lg:justify-between lg:gap-4">
-        <header className="relative isolate lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:pt-24 lg:pb-12 px-6 pt-12 pb-0 md:px-12 lg:ps-40 lg:pe-24">
-          <div className="pointer-events-none absolute inset-3 -z-10 rounded-3xl bg-[#f8f8f8] lg:inset-y-6 lg:left-0 lg:right-28" aria-hidden="true" />
+        <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:pt-24 lg:pb-12 px-6 pt-12 pb-0 md:px-12 lg:ps-40 lg:pe-24">
           <div>
             <Hero />
           </div>
